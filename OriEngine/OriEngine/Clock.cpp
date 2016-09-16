@@ -6,8 +6,10 @@ Clock::~Clock(){
 }
 
 void Clock::init(){
+	QueryPerformanceFrequency(&freq);
 	startTime = getTicks(time);
 	endTime = getTicks(time);
+	
 }
 
 inline LARGE_INTEGER Clock::getTicks(LARGE_INTEGER li)
@@ -16,13 +18,23 @@ inline LARGE_INTEGER Clock::getTicks(LARGE_INTEGER li)
 	return LARGE_INTEGER(li);
 }
 
-inline double Clock::getSeconds(LARGE_INTEGER li)
+inline LARGE_INTEGER Clock::getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER e)
 {
-
-	return 0.0;
+	LARGE_INTEGER result;
+	result.QuadPart = s.QuadPart - e.QuadPart;
+	return result;
 }
 
-inline double Clock::getDeltaTime(double seconds)
+inline double Clock::getSeconds(LARGE_INTEGER li)
 {
-	return 0.0;
+	double result;
+	result = li.QuadPart;
+	return result;
+}
+
+ double Clock::getDeltaTime()
+{
+	deltaTime = (float)getCounterDifference(startTime, endTime).QuadPart/(float)freq.QuadPart;
+
+	return deltaTime;
 }
