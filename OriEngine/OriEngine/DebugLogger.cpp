@@ -42,13 +42,15 @@ void DebugLogger::log(const MsgType threat, const std::string & _class, const st
 		// break for next statement
 		break;
 		// for Error print out the Class , Method of class , file path , which line the log was called , current time and date and a message regarding what could or is possibly happening
-	case MsgType::ERROR:
-		logFile << "ERROR: " << _class << "::" << Method << "() - " << "File :: " << filename << ", Line :: " << line << " Message :: " << msg << "\n\n";
+	case MsgType::FATAL_ERROR:
+		logFile << "FATAL_ERROR: " << _class << "::" << Method << "() - " << "File :: " << filename << ", Line :: " << line << " Message :: " << msg << "\n\n";
 		// break for next statement
 		break;
-		// for FATAL_ERROR print out the Class , Method of class , file path , which line the log was called , current time and date and a message regarding what could or is possibly happening
+		// for NONE print out the Class , Method of class , file path , which line the log was called , current time and date and a message regarding what could or is possibly happening
 	case MsgType::NONE:
-		logFile << "FATAL ERROR: " << _class << "::" << Method << "() - " << "File :: " << filename << ", Line :: " << line << " Message :: " << msg << "\n\n";
+		logFile << "NONE: " << _class << "::" << Method << "() - " << "File :: " << filename << ", Line :: " << line << " Message :: " << msg << "\n\n";
+	case MsgType::TRACE:
+		logFile << "TRACE: " << _class << "::" << Method << "() - " << "File :: " << filename << ", Line :: " << line << " Message :: " << msg << "\n\n";
 		//final break
 		break;
 		logFile.flush();
