@@ -6,18 +6,17 @@
 namespace OriEngine {
 	class DebugLogger {
 	public:
-		static enum MsgType {NONE,TRACE,ERROR,WARN,INFO};
-			~DebugLogger();
+		 enum MsgType {NONE,TRACE,FATAL_ERROR,WARN,INFO};
+		~DebugLogger();
 		static DebugLogger& getInstance();
 		void removeInstance();
 		void log(const MsgType threat,const std::string& _class, const std::string Method, const std::string& filename,const int line, const std::string& msg);
 		void clean();
 	private:
 		static std::unique_ptr<DebugLogger> logInstance;
-		 std::default_delete<DebugLogger> logDeleter;
+		std::default_delete<DebugLogger> logDeleter;
 		std::ofstream logFile;
 		DebugLogger();
-	
 	};
 }
 #endif
