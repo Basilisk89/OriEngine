@@ -15,6 +15,7 @@ namespace OriEngine {
 	private:
 		LARGE_INTEGER startTime, endTime, time, freq;
 		double start, end, deltaTime;
+		bool highResClock;
 	};
 }
 #endif
