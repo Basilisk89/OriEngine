@@ -14,6 +14,7 @@ int main(int args, char* argv[]) {
 	DebugLogger::getInstance().log(DebugLogger::MsgType::INFO, "Main", "Main", __FILE__, __LINE__, "Main Started");
 	DebugLogger::getInstance().log(DebugLogger::MsgType::FATAL_ERROR, "Main", "Main", __FILE__, __LINE__, "Test of Error");
     ogl->init();
+
 	ogl->drawPrimative();
 	while (clock.getDeltaTime() > 0.0) {
 	//	std::cout << clock.getDeltaTime() << std::endl;

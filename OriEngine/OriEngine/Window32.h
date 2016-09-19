@@ -8,6 +8,8 @@ public:
 	void init();
 	void shutDown();
 	void setWindowSize(const int w, const int h);
+	void SetupPixelFormat(HDC hdc);
+
 private: 
 	int windowWidth;
 	int windowLength;
@@ -15,5 +17,6 @@ private:
 	bool fullscreen;
 	HDC* hDC;
 	PIXELFORMATDESCRIPTOR pFD;
+	WNDCLASSEX windowClass;
 };
 #endif
