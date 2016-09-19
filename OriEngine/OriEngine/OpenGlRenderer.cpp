@@ -1,9 +1,9 @@
 #include "OpenGlRenderer.h"
-
+#include <glut-3.7.6\include\GL\glut.h>
 using namespace OriEngine;
 
 OpenGlRenderer::OpenGlRenderer(){
-	versionInfo();
+	
 }
 OpenGlRenderer::~OpenGlRenderer(){
 }
@@ -25,7 +25,17 @@ void OpenGlRenderer::drawPrimative() {
 
 }
 void OpenGlRenderer::init() {
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGB);
+	glutInitWindowSize(1200, 800);
+
+	glutCreateWindow("Game 640 GLSL");
+
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
+
+
 	glewInit();
+	versionInfo();
 }
 void OpenGlRenderer::versionInfo() {
 	/// You can (and probably need) to get some info regarding versions and manufacturer
