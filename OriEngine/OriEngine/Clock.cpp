@@ -31,14 +31,14 @@ inline LARGE_INTEGER Clock::getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER 
 inline double Clock::getSeconds(LARGE_INTEGER li)
 {
 	double result;
-	result = li.QuadPart;
+	result = (double)li.QuadPart;
 	return result;
 }
 
  double Clock::getDeltaTime()
 {
 		
-	deltaTime = (float)getCounterDifference(startTime, endTime).QuadPart/(float)freq.QuadPart;
+	deltaTime = (double)getCounterDifference(startTime, endTime).QuadPart/(double)freq.QuadPart;
 
 	return deltaTime;
 }
