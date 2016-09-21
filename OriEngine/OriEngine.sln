@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OriEngine", "OriEngine\OriEngine.vcxproj", "{15A10F65-7B9C-48E5-AA2D-109B1AF47F63}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SkeletalEngine", "SkeletalEngine\SkeletalEngine.vcxproj", "{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{15A10F65-7B9C-48E5-AA2D-109B1AF47F63}.Release|x64.Build.0 = Release|x64
 		{15A10F65-7B9C-48E5-AA2D-109B1AF47F63}.Release|x86.ActiveCfg = Release|Win32
 		{15A10F65-7B9C-48E5-AA2D-109B1AF47F63}.Release|x86.Build.0 = Release|Win32
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Debug|x64.ActiveCfg = Debug|x64
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Debug|x64.Build.0 = Debug|x64
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Debug|x86.ActiveCfg = Debug|Win32
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Debug|x86.Build.0 = Debug|Win32
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Release|x64.ActiveCfg = Release|x64
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Release|x64.Build.0 = Release|x64
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Release|x86.ActiveCfg = Release|Win32
+		{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,21 +1,21 @@
 #include "Clock.h"
 using namespace OriEngine;
 Clock::Clock(){
-	QueryPerformanceCounter(&startTime);
+	
 }
 Clock::~Clock(){
 }
 
-void Clock::init() {
+ void Clock::init() {
 	highResClock = QueryPerformanceFrequency(&freq);
-	
-	elapsedTime();
+	counter = Clock::getTicks();
 }
 void Clock::elapsedTime() {
 	QueryPerformanceCounter(&endTime);
 }
-inline LARGE_INTEGER Clock::getTicks(LARGE_INTEGER li)
+inline LARGE_INTEGER Clock::getTicks()
 {
+	LARGE_INTEGER li;
 	QueryPerformanceCounter(&li);
 	return LARGE_INTEGER(li);
 }
@@ -26,6 +26,11 @@ inline LARGE_INTEGER Clock::getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER 
 	LARGE_INTEGER result;
 	result.QuadPart = e.QuadPart - s.QuadPart;
 	return result;
+}
+
+inline double OriEngine::Clock::lastFrame(double now, double last)
+{
+	return 0.0;
 }
 
 inline double Clock::getSeconds(LARGE_INTEGER li)

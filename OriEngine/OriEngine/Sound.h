@@ -1,5 +1,6 @@
 #ifndef SOUND_H
 #define SOUND_H
+#pragma once
 #include <string>
 #include <FMOD Studio API Windows\api\lowlevel\inc\fmod.hpp>
 #include <FMOD Studio API Windows\api\lowlevel\inc\fmod_errors.h>
