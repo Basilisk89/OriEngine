@@ -5,16 +5,16 @@
 namespace OriEngine {
 	class Clock	{
 	public:
-		Clock();
-		~Clock();
-		 static void init();
-		static void elapsedTime();
+		 static inline LARGE_INTEGER getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER e);
+		 static inline double lastFrame(double now, double last);
+		 static inline double getSeconds(LARGE_INTEGER li);	
 		 static inline LARGE_INTEGER getTicks();
-		static inline LARGE_INTEGER getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER e);
-		static inline double lastFrame(double now, double last);
-		static inline double getSeconds(LARGE_INTEGER li);
 		 static double getDeltaTime() ;
+		 static void elapsedTime();
+		 static void init(); 
+		 ~Clock();
 	private:
+		Clock();
 		static LARGE_INTEGER startTime, endTime, time, freq,counter;
 		static double start, end, deltaTime;
 		static bool highResClock;

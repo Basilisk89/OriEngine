@@ -1,13 +1,14 @@
-#ifndef HDAPP_H
-#define HDAPP_H
+#ifndef ABSTRACTENGINE_H
+#define ABSTRACTENGINE_H
 #pragma once
 #include <memory>
 #include "DebugLogger.h"
 #include "Clock.h"
+#include "OpenGlRenderer.h"
 namespace OriEngine {
 	class AbstractEngine {
 	public:
-		void getInstance();
+		AbstractEngine* getInstance();
 	    virtual void onCreate() const;
 		void startRender();
 	    virtual void preRender(double time) ;
@@ -15,12 +16,11 @@ namespace OriEngine {
 		void endRender();
 	     void render() const;
 		 void cleanUp() const;
-		 static void log(DebugLogger::MsgType msgType,int line, std::string, std::string& msg);
 		~AbstractEngine();
 		AbstractEngine();
 	private:
 		std::string ApplicationName = "Ori Engine";
-		std::unique_ptr<AbstractEngine*>	appInstance;
+		std::unique_ptr<AbstractEngine>*	appInstance;
 	protected:
 	};
 }

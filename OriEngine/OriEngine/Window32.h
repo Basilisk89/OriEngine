@@ -8,8 +8,13 @@ public:
 	void getInstance();
 	void init();
 	void cleanUp();
-	void setWindowSize(const int w, const int h);
-	void SetupPixelFormat(HDC hdc);
+	void setWindowSize(const int w, const int h) {
+		windowWidth = w;
+		windowHeight = h;
+	}
+	void SetupPixelFormat(HDC hdc) {
+		
+	}
 	HWND createWindow(std::string windowName, RECT _windowRect);
 	void fullScreen(bool setFullScreen);
 	void windowUpdate(HWND hwnd);
@@ -18,7 +23,7 @@ public:
 private: 
 	Window32();
 	int windowWidth;
-	int windowLength;
+	int windowHeight;
 	int windowBit;
 	bool fullscreen;
 	HDC* hDC;
