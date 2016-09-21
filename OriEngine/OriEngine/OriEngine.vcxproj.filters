@@ -36,7 +36,7 @@
     <ClCompile Include="Sound.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HdApp.cpp">
+    <ClCompile Include="AbstractEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,7 +59,7 @@
     <ClInclude Include="Sound.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HdApp.h">
+    <ClInclude Include="AbstractEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
