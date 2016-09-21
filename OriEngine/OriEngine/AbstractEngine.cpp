@@ -12,9 +12,12 @@ AbstractEngine* AbstractEngine::getInstance() {
 	}
 	return appInstance->get();
 }
-void AbstractEngine::onCreate() const{
+void AbstractEngine::onCreate() const {
+	Clock::init();
 }
 void AbstractEngine::startRender(){
+	Clock::startTime = Clock::getTicks();
+	
 }
 void AbstractEngine::preRender(double time) {
 }
@@ -23,6 +26,7 @@ void AbstractEngine::render() const {
 void AbstractEngine::postRender()  {
 }
 void AbstractEngine::endRender(){
+	Clock::endTime = Clock::getTicks();
 }
 void AbstractEngine::cleanUp() const {
 }

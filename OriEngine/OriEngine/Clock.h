@@ -5,6 +5,9 @@
 namespace OriEngine {
 	class Clock	{
 	public:
+		 static LARGE_INTEGER startTime, endTime, time, freq,counter;
+		 static double start, end, deltaTime;
+		 static bool highResClock;
 		 static inline LARGE_INTEGER getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER e);
 		 static inline double lastFrame(double now, double last);
 		 static inline double getSeconds(LARGE_INTEGER li);	
@@ -15,9 +18,7 @@ namespace OriEngine {
 		 ~Clock();
 	private:
 		Clock();
-		static LARGE_INTEGER startTime, endTime, time, freq,counter;
-		static double start, end, deltaTime;
-		static bool highResClock;
+	
 	};
 }
 #endif
