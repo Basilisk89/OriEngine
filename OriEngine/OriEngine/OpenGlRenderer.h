@@ -10,6 +10,11 @@ namespace OriEngine {
 		virtual void init();
 		virtual void versionInfo();
 		virtual void drawPrimative();
+		
+	};
+	class OpenGLRendererBuilder :public AbstractRenderer {
+	public:
+		virtual AbstractRenderer* createRenderer();
 	};
 }
 #endif
