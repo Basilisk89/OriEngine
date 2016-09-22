@@ -9,7 +9,7 @@ OpenGlRenderer::~OpenGlRenderer(){
 }
 void OpenGlRenderer::drawPrimative() {
 	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };	// default CCW winding
-	
+
 		GLuint vao, vbo;
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
@@ -25,16 +25,11 @@ void OpenGlRenderer::drawPrimative() {
 
 }
 void OpenGlRenderer::init() {
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGB);
-	glutInitWindowSize(1200, 800);
+	glewExperimental = true;
+	
+	DebugLogger::getInstance().log(DebugLogger::INFO, "AbstractEngine", "getInstance", __FILE__, __LINE__, "Engine Started");
 
-	glutCreateWindow("Game 640 GLSL");
-
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
-
-
-	glewInit();
+	
 	versionInfo();
 }
 void OpenGlRenderer::versionInfo() {
@@ -47,7 +42,6 @@ void OpenGlRenderer::versionInfo() {
 	const GLubyte *vendor = glGetString(GL_VENDOR);
 	const GLubyte *renderer = glGetString(GL_RENDERER);
 	const GLubyte *glslVersion = glGetString(GL_SHADING_LANGUAGE_VERSION);
-
 
 	printf("GL Version - %s\n", version);
 	printf("GL Version - %d.%d\n", major, minor);

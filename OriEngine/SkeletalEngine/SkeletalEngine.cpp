@@ -1,6 +1,7 @@
-#pragma once
-using namespace OriEngine;
-class SkeletalEngine : public AbstractEngine {
+#include ""
+namespace OriEngine {
+	class SkeletalEngine : public AbstractEngine {
 
 
-};
+	};
+}

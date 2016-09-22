@@ -6,11 +6,19 @@
 namespace OriEngine {
 	class AbstractRenderer{
 	public:
-		explicit AbstractRenderer();
+		AbstractRenderer() {
+			DebugLogger::getInstance().log(DebugLogger::TRACE, "AbstractEngine", "getInstance", __FILE__, __LINE__, "Engine Started");
+		}
 		virtual void drawPrimative() = 0;
 		virtual void init() = 0;
-		virtual ~AbstractRenderer();
+		
 		virtual void versionInfo() = 0;
+
+	};
+	class AbstractRendererBuilder {
+
+	public:
+		virtual AbstractRenderer* createRenderer() = 0;
 	};
 }
 #endif 

@@ -1,7 +1,7 @@
 #include "DebugLogger.h"
 using namespace OriEngine;
 std::unique_ptr<DebugLogger>DebugLogger::logInstance(nullptr);
-DebugLogger::DebugLogger():logFile(std::ofstream("$(ProjectDir)/../Debug/DebugLog.log")){
+DebugLogger::DebugLogger():logFile(std::ofstream("DebugLog.log")){
 	
 }
 DebugLogger::~DebugLogger(){
@@ -23,7 +23,7 @@ void DebugLogger::clean() {
 	// file stream cleaner obj
 	std::fstream cleaner;
 	// open the file for the cleaner obj to do its job
-	cleaner.open("$ProjectDir/../Debug/DebugLog.log", std::fstream::out);
+	cleaner.open("DebugLog.log", std::fstream::out);
 	// then close it , cleaning the whole file
 	cleaner.close();
 }
