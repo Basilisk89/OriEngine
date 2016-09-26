@@ -1,7 +1,7 @@
 #include "DebugLogger.h"
 using namespace OriEngine;
 std::unique_ptr<DebugLogger>DebugLogger::logInstance(nullptr);
-DebugLogger::DebugLogger():logFile(std::ofstream("DebugLog.log")){
+DebugLogger::DebugLogger(){
 	
 }
 DebugLogger::~DebugLogger(){
@@ -28,7 +28,7 @@ void DebugLogger::clean() {
 	cleaner.close();
 }
 void DebugLogger::log(const MsgType threat, const std::string & _class, const std::string Method, const std::string & filename, const int line, const std::string & msg){
-	
+	logFile =  std::ofstream("DebugLog.log");
 	//switch statement using what type of message i should be getting
 	switch (threat) {
 		// for info print out the Class , Method of class , file path , which line the log was called , current time and date and a message regarding what could or is possibly happening

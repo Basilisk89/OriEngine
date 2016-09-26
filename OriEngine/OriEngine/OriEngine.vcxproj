@@ -69,17 +69,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>$(ProjectDir)\..\OriEngineDepenacies\FMOD Studio API Windows\api\lowlevel\lib;$(ProjectDir)\..\OriEngineDepenacies\SDL2-2.0.4\lib\x86;$(ProjectDir)\..\OriEngineDepenacies\glew-2.0.0\lib\Release\Win32;$(ProjectDir)\..\OriEngineDepenacies\glut-3.7.6\lib\glut\Debug;$(ProjectDir)\..\OriEngineDepenacies\Assimp\lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\OpenAL 1.1 SDK\libs\Win32;$(ProjectDir)\..\OriEngineDepenacies\FMOD Studio API Windows\api\lowlevel\lib;$(ProjectDir)\..\OriEngineDepenacies\SDL2-2.0.4\lib\x86;$(ProjectDir)\..\OriEngineDepenacies\glew-2.0.0\lib\Release\Win32;$(ProjectDir)\..\OriEngineDepenacies\glut-3.7.6\lib\glut\Debug;$(ProjectDir)\..\OriEngineDepenacies\Assimp\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\OriEngineDepenacies;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\OpenAL 1.1 SDK\include;$(ProjectDir)\..\OriEngineDepenacies;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glew32.lib;assimp.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;assimp.lib;fmod_vc.lib;opengl32.lib;openAL32.lib;alut.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -132,6 +132,7 @@
     <ClInclude Include="AbstractEngine.h" />
     <ClInclude Include="OpenGlRenderer.h" />
     <ClInclude Include="Sound.h" />
+    <ClInclude Include="Vector.h" />
     <ClInclude Include="Window32.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

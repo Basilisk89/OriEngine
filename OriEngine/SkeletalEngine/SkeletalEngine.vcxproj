@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Sound.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sound.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D8F4234A-9FC3-4BB3-B1E0-94AE507B85AD}</ProjectGuid>
     <RootNamespace>SkeletalEngine</RootNamespace>
@@ -68,13 +75,20 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\FMOD Studio API Windows\api\lowlevel\lib;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\SDL2-2.0.4\lib\x86;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\FMOD Studio API Windows\api\lowlevel\inc;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\SDL2-2.0.4\include;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\OpenAL 1.1 SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>alut.lib;OpenAL32.lib;sdl2.lib;fmod_vc.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -109,9 +123,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="SkeletalEngine.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

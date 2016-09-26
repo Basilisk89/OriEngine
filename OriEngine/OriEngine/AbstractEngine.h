@@ -17,6 +17,9 @@ namespace OriEngine {
 		void startRender();
 	     void render() const;
 		 void cleanUp() ;
+		 AbstractRenderer* getRenderer() {
+			 return renderer;
+		 }
 		 bool stillRendering() {
 			 return true;
 		 }

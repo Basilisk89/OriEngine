@@ -2,38 +2,47 @@
 #define WINDOW32_H
 #include <Windows.h>
 #include "DebugLogger.h"
-class Window32{
-public:
-	~Window32();
-	void getInstance();
-	void init();
-	void cleanUp();
-	void setWindowSize(const int w, const int h) {
-		windowWidth = w;
-		windowHeight = h;
-	}
-	void SetupPixelFormat(HDC hdc) {
+namespace OriEngine {
+	class Window32 {
+	public:
+	
+		void getInstance();
+
+		void cleanUp();
+		Window32();
+		~Window32();
+		HWND createWindow(HWND hWnd,HINSTANCE hi);
+		void fullScreen(bool setFullScreen);
+		void windowUpdate(HWND hwnd);
+		void swapBuffers(HDC hdc);
+		HDC getHDC();
+		HWND getHWND() const;
+		void showWindow(HWND hwnd, int show);
+		void setPixelFormat();
+		void createContext();
+		void deleteContext();
+		void setWindowSize(int width, int height);
+		bool initWindowClass(WNDPROC l, HINSTANCE hi);
+	
+		bool peekMessage(MSG &msg);
+		void setDC(HWND hWnd);
+		void setHWND(HWND hwnd);
+	private:
+
+		int windowWidth;
+		int windowHeight;
+		int windowBit;
+		bool fullscreen;
+		HDC hDC;
+		HGLRC hRC;
+		PIXELFORMATDESCRIPTOR pFD;
+		WNDCLASS windowClass;
+		HWND hWnd;
 		
-	}
-	HWND createWindow(std::string windowName, RECT _windowRect);
-	void fullScreen(bool setFullScreen);
-	void windowUpdate(HWND hwnd);
-	void swapBuffers(HDC hdc);
-	void showWindow(HWND hwnd, int show);
-private: 
-	Window32();
-	int windowWidth;
-	int windowHeight;
-	int windowBit;
-	bool fullscreen;
-	HDC* hDC;
-	PIXELFORMATDESCRIPTOR pFD;
-	WNDCLASSEX windowClass;
-	HWND hWND;
-	MSG msg;
-	DWORD dwExStyle,dwStyle;
-	RECT windowRect;
-	DEVMODE dmScreenSettings;
-protected:
-};
+		DWORD dwExStyle, dwStyle;
+		RECT windowRect;
+		DEVMODE dmScreenSettings;
+	protected:
+	};
+}
 #endif

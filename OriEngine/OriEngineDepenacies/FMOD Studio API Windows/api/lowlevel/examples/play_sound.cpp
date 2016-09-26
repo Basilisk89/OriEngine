@@ -60,7 +60,7 @@ int FMOD_Main()
 
         if (Common_BtnPress(BTN_ACTION1))
         {
-            result = system->playSound(sound1, 0, false, &channel);
+          
             ERRCHECK(result);
         }
 

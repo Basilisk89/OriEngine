@@ -1,6 +1,7 @@
 #pragma once
 #include "AbstractEngine.h"
 #include "OpenGlRenderer.h"
+#include "Sound.h"
 using namespace OriEngine;
 	long windowWidth = 1024;
 	long windowHeight = 768;
@@ -8,7 +9,7 @@ using namespace OriEngine;
 	bool fullscreen = false;
 	AbstractEngine *Engine;
 	HDC hDC;
-
+	Sound* sound;
 
 	class SkeletalEngine : public AbstractEngine
 	{
@@ -79,11 +80,14 @@ using namespace OriEngine;
 		static HDC hDC;
 		static HGLRC hRC;
 		int height, width;
-
+		
 		// dispatch messages
 		switch (uMsg)
 		{
-		case WM_CREATE:			// window creation
+		case WM_CREATE:		
+			sound = new Sound();	// window creation
+			sound->loadSound(std::string("03-terran-1.mp3"));
+			sound->playSound();
 			hDC = GetDC(hWnd);
 			SetupPixelFormat(hDC);
 			//SetupPalette();
@@ -93,7 +97,8 @@ using namespace OriEngine;
 			{
 				DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "", "", __FILE__, __LINE__, "");
 			} // wait until the window is set up before initializing glew!
-			AbstractEngine::getInstance()->init();
+			AbstractEngine::getInstance();
+		
 			break;
 
 		case WM_DESTROY:			// window destroy
@@ -123,6 +128,7 @@ using namespace OriEngine;
 		case WM_PAINT:				// paint
 			PAINTSTRUCT ps;
 			BeginPaint(hWnd, &ps);
+			
 			EndPaint(hWnd, &ps);
 			break;
 
@@ -265,16 +271,17 @@ using namespace OriEngine;
 		// check if window creation failed (hwnd would equal NULL)
 		if (!hwnd)
 			return 0;
-
+	
 		ShowWindow(hwnd, SW_SHOW);			// display the window
 		UpdateWindow(hwnd);					// update the window
-		AbstractEngine::getInstance()->render();
+		
 		while (AbstractEngine::getInstance()->stillRendering())
-		{
+		{	
 			AbstractEngine::getInstance()->startRender();
-			AbstractEngine::getInstance()->render();
+	
 			AbstractEngine::getInstance()->endRender();
 
+			sound->update();
 			SwapBuffers(hDC);
 			
 			while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE))
@@ -300,3 +307,4 @@ using namespace OriEngine;
 
 		return (int)msg.wParam;
 	}
+	

@@ -3,6 +3,7 @@ using namespace OriEngine;
 AbstractEngine *AbstractEngine::appInstance = nullptr;
 AbstractEngine::AbstractEngine(){
 	init();
+
 }
 AbstractEngine::~AbstractEngine(){
 	cleanUp();
@@ -21,6 +22,7 @@ void AbstractEngine::onCreate() {
 		lastFrameFinishTime = Clock::getTime();
 		renderer = new OpenGlRenderer();
 		renderer->init();
+			
 	}
 void AbstractEngine::startRender(){
 	double timeSinceLastFrame = 0.0;
@@ -33,14 +35,16 @@ void AbstractEngine::startRender(){
 
 	
 		preRender(timeSinceLastFrame);
+		
 }
 void AbstractEngine::preRender(double time) {
+
 }
 void AbstractEngine::render() const {
-//	renderer->drawPrimative();
+		
 }
 void AbstractEngine::postRender()  {
-	
+
 }
 void AbstractEngine::endRender(){
 	double now = Clock::getTime();
