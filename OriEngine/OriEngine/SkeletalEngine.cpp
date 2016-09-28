@@ -18,13 +18,11 @@ using namespace OriEngine;
 		double lastFpsPrint = 0.0;
 
 	public:
-		SkeletalEngine()
-		{
+		SkeletalEngine()	{
 		}
 
 
-		virtual void postRender()
-		{
+		virtual void postRender(){
 
 		}
 
@@ -32,13 +30,11 @@ using namespace OriEngine;
 		{
 		}
 
-		virtual void onCreate()
-		{
+		virtual void onCreate(){
 			
 		}
 
-		virtual void preRender(double timeSinceLastFrame)
-		{
+		virtual void preRender(double timeSinceLastFrame){
 		
 		}
 
@@ -80,14 +76,15 @@ using namespace OriEngine;
 		static HDC hDC;
 		static HGLRC hRC;
 		int height, width;
-		
+			sound = new Sound();	// window creation
+			sound->init();
+			sound->loadSound("03-terran-1.mp3");
+			sound->playSound();
 		// dispatch messages
 		switch (uMsg)
 		{
 		case WM_CREATE:		
-			sound = new Sound();	// window creation
-			sound->loadSound(std::string("03-terran-1.mp3"));
-			sound->playSound();
+		
 			hDC = GetDC(hWnd);
 			SetupPixelFormat(hDC);
 			//SetupPalette();

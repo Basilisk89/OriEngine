@@ -39,6 +39,12 @@
     <ClCompile Include="SkeletalEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\OneDrive\Game Programming\Networking\SDLOpenGLFramework\SDLOpenGLFramework\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DebugLogger.h">
@@ -63,6 +69,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\OneDrive\Game Programming\Networking\SDLOpenGLFramework\SDLOpenGLFramework\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

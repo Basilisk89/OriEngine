@@ -10,7 +10,7 @@ namespace OriEngine {
 	public:
 		Sound();
 		~Sound();
-		void loadSound(const std::string& fileName);
+		void loadSound(const char *filename);
 		void playSound();
 		void init();
 		void update();
