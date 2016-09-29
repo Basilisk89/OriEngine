@@ -79,7 +79,7 @@
       <AdditionalIncludeDirectories>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\OpenAL 1.1 SDK\include;$(ProjectDir)\..\OriEngineDepenacies;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glew32.lib;assimp.lib;fmod_vc.lib;opengl32.lib;openAL32.lib;alut.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;assimp.lib;fmod_vc.lib;opengl32.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

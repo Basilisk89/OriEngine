@@ -3,43 +3,32 @@
 using namespace OriEngine;
 	GLuint vao, vbo;
 	float verts[9] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };
-OpenGlRenderer::OpenGlRenderer(){
-	
+OpenGlRenderer::OpenGlRenderer(){	
 }
 OpenGlRenderer::~OpenGlRenderer(){
 }
-void OpenGlRenderer::drawPrimative(HDC hDC) {
-	
-	
-
+void OpenGlRenderer::drawPrimative() {
 		if (glGetError() == GL_NO_ERROR) {
 			glGenVertexArrays(1, &vao);
-			glBindVertexArray(vao);
-			glGenBuffers(1, &vbo);
-			glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
-			glBufferData(GL_ARRAY_BUFFER, 3 * sizeof(float), verts, GL_STATIC_DRAW);
-
-			glEnableVertexAttribArray(0);
-			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-
+		glBindVertexArray(vao);
+		glGenBuffers(1, &vbo);
+		glBindBuffer(GL_ARRAY_BUFFER, vbo);
+		glBufferData(GL_ARRAY_BUFFER, 3 * sizeof(float), verts, GL_STATIC_DRAW);
+		glEnableVertexAttribArray(1);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 			glDrawArrays(GL_TRIANGLES, 0, 3);	
-	
-		}
-		else {
+		}else{
 			DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "OpenGLRenderer", "DrawPrimative", __FILE__, __LINE__, "Bad news opengl sucks");
 		}
 }
 void OpenGlRenderer::init() {
+
+	
 	glewExperimental = true;
-	
 	// default CCW winding
-
-
-
+	glewInit();
 
 	
-	versionInfo();
 }
 void OpenGlRenderer::versionInfo() {
 	/// You can (and probably need) to get some info regarding versions and manufacturer

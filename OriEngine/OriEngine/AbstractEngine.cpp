@@ -41,7 +41,7 @@ void AbstractEngine::preRender(double time) {
 
 }
 void AbstractEngine::render() const {
-		
+	renderer->drawPrimative();
 }
 void AbstractEngine::postRender()  {
 

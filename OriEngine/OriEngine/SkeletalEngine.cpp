@@ -94,7 +94,7 @@ using namespace OriEngine;
 			{
 				DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "", "", __FILE__, __LINE__, "");
 			} // wait until the window is set up before initializing glew!
-			AbstractEngine::getInstance();
+			//AbstractEngine::getInstance();
 		
 			break;
 

@@ -11,7 +11,7 @@ namespace OriEngine {
 			//DebugLogger::getInstance().log(DebugLogger::TRACE, "Abstractrenderer", "getInstance", __FILE__, __LINE__, "Engine Started");
 		}
 		virtual ~AbstractRenderer();
-		virtual void drawPrimative(HDC hDC) = 0;
+		virtual void drawPrimative() = 0;
 		virtual void init() = 0;
 		
 		virtual void versionInfo() = 0;

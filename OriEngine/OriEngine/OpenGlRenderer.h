@@ -9,7 +9,7 @@ namespace OriEngine {
 		~OpenGlRenderer();
 		virtual void init();
 		virtual void versionInfo();
-		virtual void drawPrimative(HDC hDC);
+		virtual void drawPrimative();
 		
 	};
 	class OpenGLRendererBuilder :public AbstractRenderer {

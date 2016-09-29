@@ -45,7 +45,7 @@ namespace OriEngine {
 		int							frameAvgNumber;
 		/** The maximum number of frames used to calculate the frame rate */
 		int							frameAvgMaxNumber;
-		AbstractRenderer* renderer;
+		OpenGlRenderer* renderer;
 	protected:
 	};
 }
