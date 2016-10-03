@@ -2,12 +2,14 @@
 #define ABSTRACTENGINE_H
 #pragma once
 #include <memory>
+#include "Window.h"
 #include "DebugLogger.h"
 #include "Clock.h"
 #include "OpenGlRenderer.h"
 namespace OriEngine {
 	class AbstractEngine {
 	public:
+		OpenGlRenderer* renderer;
 		static AbstractEngine* getInstance();
 	    virtual void onCreate() = 0 ;
 		void init();
@@ -17,6 +19,7 @@ namespace OriEngine {
 		void startRender();
 	     void render() const;
 		 void cleanUp() ;
+		 void handleEvents();
 		 AbstractRenderer* getRenderer() {
 			 return renderer;
 		 }
@@ -45,7 +48,7 @@ namespace OriEngine {
 		int							frameAvgNumber;
 		/** The maximum number of frames used to calculate the frame rate */
 		int							frameAvgMaxNumber;
-		OpenGlRenderer* renderer;
+		Window window;
 	protected:
 	};
 }

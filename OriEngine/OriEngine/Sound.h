@@ -4,26 +4,23 @@
 #include <string>
 #include "DebugLogger.h"
 #include <FMOD Studio API Windows\api\lowlevel\inc\fmod.hpp>
+#include <FMOD Studio API Windows\api\lowlevel\inc\fmod.h>
 #include "Vector.h"
 namespace OriEngine {
 	class Sound{
 	public:
 		Sound();
 		~Sound();
-		void loadSound(const char *filename);
-		void playSound();
-		void init();
-		void update();
-		bool getChannelplaying();
-		FMOD::Sound *currentsound = 0;
-		int channelsplaying = 0;
-
-		FMOD::System     *system;
-		FMOD::Sound      *sound1;
-		FMOD::Channel    *channel = 0;
-		FMOD_RESULT       result;
-		unsigned int      version;
-		void             *extradriverdata = 0;
+		FMOD::Sound      *sound;
+		FMOD::Sound* getSound() {
+			return sound;
+		}
+		void setSound(FMOD::Sound *s) {
+			sound = s;
+		}
+	private:
+	
 	};
+	
 }
 #endif

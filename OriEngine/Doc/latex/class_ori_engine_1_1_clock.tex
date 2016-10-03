@@ -1,0 +1,177 @@
+\hypertarget{class_ori_engine_1_1_clock}{}\section{Ori\+Engine\+:\+:Clock Class Reference}
+\label{class_ori_engine_1_1_clock}\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+
+
+{\ttfamily \#include $<$Clock.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ori_engine_1_1_clock_afc976ce68fa85e15cc06f9ed47bddb7c}{$\sim$\+Clock} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER \hyperlink{class_ori_engine_1_1_clock_aace1360f2c2588f877a349af1b6e292e}{get\+Counter\+Difference} (L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER s, L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER e)
+\item 
+static double \hyperlink{class_ori_engine_1_1_clock_ae7323d08dc94df712cc7ebb8436eba63}{last\+Frame} (double now, double last)
+\item 
+static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER \hyperlink{class_ori_engine_1_1_clock_aa084e2f95ad8ef19c2b346cd98b76cf1}{get\+Current\+Ticks} ()
+\item 
+static void \hyperlink{class_ori_engine_1_1_clock_aef03f6bf516fba7b5e79c9dd8b4d1f60}{get\+Frequency} (L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER frequency)
+\item 
+static double \hyperlink{class_ori_engine_1_1_clock_addeddeb3e238c9f9d7c8f9b5e639fe18}{get\+Time} ()
+\item 
+static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER \hyperlink{class_ori_engine_1_1_clock_a1963f95715596314a277e77401e42e38}{get\+Ticks} ()
+\item 
+static void \hyperlink{class_ori_engine_1_1_clock_aa89ec268b0bb79f4caa36c4aa50980b8}{elapsed\+Time} ()
+\item 
+static void \hyperlink{class_ori_engine_1_1_clock_aadaf546dbfb57577d2a9b0e9e4c95123}{init} ()
+\item 
+static double \hyperlink{class_ori_engine_1_1_clock_af05b430c26528f81d4c0ea530bfc3710}{ticks\+To\+Seconds} (L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER ticks)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER \hyperlink{class_ori_engine_1_1_clock_abe3180bfe2b7ae463f5ee6ce0e21e7c1}{counter}
+\item 
+static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER \hyperlink{class_ori_engine_1_1_clock_a38fb078b0bae590ca4ef633654082385}{time}
+\item 
+static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER \hyperlink{class_ori_engine_1_1_clock_af7e7d35c38fb0c2caec5e60b4b54d967}{freq}
+\item 
+static double \hyperlink{class_ori_engine_1_1_clock_a787b0d8adf09d20da696f502658cbcfb}{start}
+\item 
+static double \hyperlink{class_ori_engine_1_1_clock_afc43c686502126feebf54a99783dc7fd}{end}
+\item 
+static double \hyperlink{class_ori_engine_1_1_clock_afd164eb5b041271fe67e2c85ffb4c455}{delta\+Time}
+\item 
+static bool \hyperlink{class_ori_engine_1_1_clock_a30554fc8e22a92ae8b26ef881b802828}{high\+Res\+Clock} = false
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ori_engine_1_1_clock_adbc370eb6b5f8d01645cf440188160a8}{Clock} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ori_engine_1_1_clock_afc976ce68fa85e15cc06f9ed47bddb7c}{}\label{class_ori_engine_1_1_clock_afc976ce68fa85e15cc06f9ed47bddb7c} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!````~Clock@{$\sim$\+Clock}}
+\index{````~Clock@{$\sim$\+Clock}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{$\sim$\+Clock()}{~Clock()}}
+{\footnotesize\ttfamily Clock\+::$\sim$\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_clock_adbc370eb6b5f8d01645cf440188160a8}{}\label{class_ori_engine_1_1_clock_adbc370eb6b5f8d01645cf440188160a8} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!Clock@{Clock}}
+\index{Clock@{Clock}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{Clock()}{Clock()}}
+{\footnotesize\ttfamily Clock\+::\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ori_engine_1_1_clock_aa89ec268b0bb79f4caa36c4aa50980b8}{}\label{class_ori_engine_1_1_clock_aa89ec268b0bb79f4caa36c4aa50980b8} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!elapsed\+Time@{elapsed\+Time}}
+\index{elapsed\+Time@{elapsed\+Time}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{elapsed\+Time()}{elapsedTime()}}
+{\footnotesize\ttfamily void Clock\+::elapsed\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_aace1360f2c2588f877a349af1b6e292e}{}\label{class_ori_engine_1_1_clock_aace1360f2c2588f877a349af1b6e292e} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!get\+Counter\+Difference@{get\+Counter\+Difference}}
+\index{get\+Counter\+Difference@{get\+Counter\+Difference}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{get\+Counter\+Difference()}{getCounterDifference()}}
+{\footnotesize\ttfamily L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER Clock\+::get\+Counter\+Difference (\begin{DoxyParamCaption}\item[{L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER}]{s,  }\item[{L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_aa084e2f95ad8ef19c2b346cd98b76cf1}{}\label{class_ori_engine_1_1_clock_aa084e2f95ad8ef19c2b346cd98b76cf1} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!get\+Current\+Ticks@{get\+Current\+Ticks}}
+\index{get\+Current\+Ticks@{get\+Current\+Ticks}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{get\+Current\+Ticks()}{getCurrentTicks()}}
+{\footnotesize\ttfamily static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER Ori\+Engine\+::\+Clock\+::get\+Current\+Ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_aef03f6bf516fba7b5e79c9dd8b4d1f60}{}\label{class_ori_engine_1_1_clock_aef03f6bf516fba7b5e79c9dd8b4d1f60} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!get\+Frequency@{get\+Frequency}}
+\index{get\+Frequency@{get\+Frequency}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{get\+Frequency()}{getFrequency()}}
+{\footnotesize\ttfamily static void Ori\+Engine\+::\+Clock\+::get\+Frequency (\begin{DoxyParamCaption}\item[{L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER}]{frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_a1963f95715596314a277e77401e42e38}{}\label{class_ori_engine_1_1_clock_a1963f95715596314a277e77401e42e38} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!get\+Ticks@{get\+Ticks}}
+\index{get\+Ticks@{get\+Ticks}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{get\+Ticks()}{getTicks()}}
+{\footnotesize\ttfamily static L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER Ori\+Engine\+::\+Clock\+::get\+Ticks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_addeddeb3e238c9f9d7c8f9b5e639fe18}{}\label{class_ori_engine_1_1_clock_addeddeb3e238c9f9d7c8f9b5e639fe18} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily static double Ori\+Engine\+::\+Clock\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_aadaf546dbfb57577d2a9b0e9e4c95123}{}\label{class_ori_engine_1_1_clock_aadaf546dbfb57577d2a9b0e9e4c95123} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!init@{init}}
+\index{init@{init}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Clock\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_ae7323d08dc94df712cc7ebb8436eba63}{}\label{class_ori_engine_1_1_clock_ae7323d08dc94df712cc7ebb8436eba63} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!last\+Frame@{last\+Frame}}
+\index{last\+Frame@{last\+Frame}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{last\+Frame()}{lastFrame()}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Clock\+::last\+Frame (\begin{DoxyParamCaption}\item[{double}]{now,  }\item[{double}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_af05b430c26528f81d4c0ea530bfc3710}{}\label{class_ori_engine_1_1_clock_af05b430c26528f81d4c0ea530bfc3710} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!ticks\+To\+Seconds@{ticks\+To\+Seconds}}
+\index{ticks\+To\+Seconds@{ticks\+To\+Seconds}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{ticks\+To\+Seconds()}{ticksToSeconds()}}
+{\footnotesize\ttfamily static double Ori\+Engine\+::\+Clock\+::ticks\+To\+Seconds (\begin{DoxyParamCaption}\item[{L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER}]{ticks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_ori_engine_1_1_clock_abe3180bfe2b7ae463f5ee6ce0e21e7c1}{}\label{class_ori_engine_1_1_clock_abe3180bfe2b7ae463f5ee6ce0e21e7c1} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!counter@{counter}}
+\index{counter@{counter}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER Clock\+::counter\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_afd164eb5b041271fe67e2c85ffb4c455}{}\label{class_ori_engine_1_1_clock_afd164eb5b041271fe67e2c85ffb4c455} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!delta\+Time@{delta\+Time}}
+\index{delta\+Time@{delta\+Time}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{delta\+Time}{deltaTime}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Clock\+::delta\+Time\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_afc43c686502126feebf54a99783dc7fd}{}\label{class_ori_engine_1_1_clock_afc43c686502126feebf54a99783dc7fd} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!end@{end}}
+\index{end@{end}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Clock\+::end\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_af7e7d35c38fb0c2caec5e60b4b54d967}{}\label{class_ori_engine_1_1_clock_af7e7d35c38fb0c2caec5e60b4b54d967} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!freq@{freq}}
+\index{freq@{freq}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER Clock\+::freq\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_a30554fc8e22a92ae8b26ef881b802828}{}\label{class_ori_engine_1_1_clock_a30554fc8e22a92ae8b26ef881b802828} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!high\+Res\+Clock@{high\+Res\+Clock}}
+\index{high\+Res\+Clock@{high\+Res\+Clock}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{high\+Res\+Clock}{highResClock}}
+{\footnotesize\ttfamily bool Clock\+::high\+Res\+Clock = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_a787b0d8adf09d20da696f502658cbcfb}{}\label{class_ori_engine_1_1_clock_a787b0d8adf09d20da696f502658cbcfb} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!start@{start}}
+\index{start@{start}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Clock\+::start\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_clock_a38fb078b0bae590ca4ef633654082385}{}\label{class_ori_engine_1_1_clock_a38fb078b0bae590ca4ef633654082385} 
+\index{Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}!time@{time}}
+\index{time@{time}!Ori\+Engine\+::\+Clock@{Ori\+Engine\+::\+Clock}}
+\subsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily L\+A\+R\+G\+E\+\_\+\+I\+N\+T\+E\+G\+ER Clock\+::time\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_clock_8h}{Clock.\+h}\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_clock_8cpp}{Clock.\+cpp}\end{DoxyCompactItemize}

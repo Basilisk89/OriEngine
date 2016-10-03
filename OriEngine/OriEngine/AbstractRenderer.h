@@ -1,6 +1,6 @@
 #ifndef ABSTRACTRENDERER_H
 #define ABSTRACTRENDERER_H
-#include "glew-2.0.0\include\GL\glew.h"
+#include <glew-2.0.0\include\GL\glew.h>
 #include "DebugLogger.h"
 #include <cstdio>
 #include <Windows.h>
