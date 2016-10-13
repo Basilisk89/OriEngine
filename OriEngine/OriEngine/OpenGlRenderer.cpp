@@ -17,8 +17,7 @@ void OpenGlRenderer::drawPrimative() {
 void OpenGlRenderer::init() {
 	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };
 	bool primSetup = false;
-	if (!primSetup)
-	{
+	if (!primSetup){
 
 		glGenVertexArrays(1, &vao);
 		glBindVertexArray(vao);
