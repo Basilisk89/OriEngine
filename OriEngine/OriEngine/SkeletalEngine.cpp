@@ -98,10 +98,9 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		wglMakeCurrent(hDC, hRC);
 
 		//LogManager::getInstance().error(std::string("Game created before GLEWInit in winMain"));
-		glewExperimental = GL_TRUE;
-		if (glewInit() != GLEW_OK)
-		{
-			//LogManager::getInstance().error(std::string("Failed to initialize glew"));
+	//	glewExperimental = GL_TRUE;
+		if (glewInit() != GLEW_OK){
+			DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "SkeletalEngine.cpp", "MainWindowProc", __FILE__, __LINE__, "Glew Failed to Initialize");
 		} // wait until the window is set up before initializing glew!
 	
 		AbstractEngine::getInstance()->musicSystem.createSounds("C:/Users/Ryan/Documents/GitHub/OriEngine/OriEngine/OriEngineResources/FFXIV_OST_The_Fractal_Continuum_Theme.mp3", 1);
@@ -263,21 +262,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	AdjustWindowRectEx(&windowRect, dwStyle, FALSE, dwExStyle);		// Adjust Window To True Requested Size
 
 																	// class registered, so now create our window
-	hwnd = CreateWindowEx(NULL,									// extended style
-		"GLClass",							// class name
-		"OriEngine",	// The Window's name
-		dwStyle | WS_CLIPCHILDREN |
-		WS_CLIPSIBLINGS,
-		0, 0,								// x,y coordinate
-		windowRect.right - windowRect.left,
-		windowRect.bottom - windowRect.top, // width, height
-		NULL,								// handle to parent
-		NULL,								// handle to menu
-		hInstance,							// application instance
-		NULL);								// no extra params
+	hwnd = CreateWindowEx(NULL,"GLClass",	"OriEngine",dwStyle | WS_CLIPCHILDREN |WS_CLIPSIBLINGS,0, 0,	windowRect.right - windowRect.left,windowRect.bottom - windowRect.top, NULL,NULL,hInstance,	NULL);								
 
 
-
+	AbstractEngine::getInstance()->renderer.init();
 	hDC = GetDC(hwnd);
 
 	// check if window creation failed (hwnd would equal NULL)
@@ -288,7 +276,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	ShowWindow(hwnd, SW_SHOW);			// display the window
 	UpdateWindow(hwnd);					// update the window
 
-	AbstractEngine::getInstance()->renderer.init();
+
 
 
 
