@@ -7,26 +7,11 @@ OpenGlRenderer::OpenGlRenderer(){
 OpenGlRenderer::~OpenGlRenderer(){
 }
 void OpenGlRenderer::drawPrimative() {
-	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };
-	bool primSetup = false;
-	if (!primSetup)
-	{
-
-		glGenVertexArrays(1, &vao);
-		glBindVertexArray(vao);
-		glGenBuffers(1, &vbo);
-		glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
-		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), verts, GL_STATIC_DRAW);
-		glEnableVertexAttribArray(0);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-
-		primSetup = true;
-	}
+	
 	glBindVertexArray(vao);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 	
-			DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "OpenGLRenderer", "DrawPrimative", __FILE__, __LINE__, "Bad news opengl sucks");
+			
 	
 }
 void OpenGlRenderer::init() {

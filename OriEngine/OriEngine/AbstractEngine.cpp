@@ -5,7 +5,6 @@ using namespace OriEngine;
 AbstractEngine *AbstractEngine::appInstance = nullptr;
 AbstractEngine::AbstractEngine(){
 	init();
-
 }
 AbstractEngine::~AbstractEngine(){
 	cleanUp();
@@ -26,7 +25,7 @@ void AbstractEngine::onCreate() {
 		Clock::init();
 		lastFrameStartTime = Clock::getTime();
 		lastFrameFinishTime = Clock::getTime();
-	
+		
 	
 
 	

@@ -103,13 +103,14 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		{
 			//LogManager::getInstance().error(std::string("Failed to initialize glew"));
 		} // wait until the window is set up before initializing glew!
-		engine->getInstance()->init();
+	
 		AbstractEngine::getInstance()->musicSystem.createSounds("C:/Users/Ryan/Documents/GitHub/OriEngine/OriEngine/OriEngineResources/FFXIV_OST_The_Fractal_Continuum_Theme.mp3", 1);
 		AbstractEngine::getInstance()->musicSystem.playSounds(1);
 		break;
 
 	case WM_DESTROY:			// window destroy
 	case WM_QUIT:
+		exit(0);
 	case WM_CLOSE:					// windows is closing
 
 									// deselect rendering context and delete it
@@ -119,6 +120,7 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 
 		// send WM_QUIT to message queue
 		PostQuitMessage(0);
+		exit(0);
 		break;
 
 	case WM_SIZE:
@@ -166,10 +168,10 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		fwKeys = (int)wParam;    // virtual-key code 
 		keyData = lParam;          // key data 
 
-		switch (fwKeys)
-		{
+		switch (fwKeys){
 		case VK_ESCAPE:
 			PostQuitMessage(0);
+			exit(0);
 			break;
 		default:
 			/*if(GeEngine::getRunningApp()->deliverKeyDownEvents())
@@ -286,12 +288,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	ShowWindow(hwnd, SW_SHOW);			// display the window
 	UpdateWindow(hwnd);					// update the window
 
+	AbstractEngine::getInstance()->renderer.init();
 
 
 
-
-	while (true)
-	{
+	while (true){
 		AbstractEngine::getInstance()->startRender();
 		AbstractEngine::getInstance()->render();
 		AbstractEngine::getInstance()->endRender();
