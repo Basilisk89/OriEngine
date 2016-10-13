@@ -19,8 +19,12 @@ OriEngine::MusicSystem::~MusicSystem(){
 }
 bool MusicSystem::createSounds(char *fileName, int index) {
 	FMOD_RESULT result = soundSystem->createSound(fileName, FMOD_DEFAULT, 0, &sounds->sound);
-	if (result != FMOD_OK) {	return false;}
-	else {	return true;}
+	if (result != FMOD_OK) {	
+		DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "Music", "CreateSound", __FILE__, __LINE__, "did not load song");
+		return false;}
+	else {	
+		DebugLogger::getInstance().log(DebugLogger::INFO, "Music", "CreateSound", __FILE__, __LINE__, " loading song");
+		return true;}
 }
 bool MusicSystem::playSounds(int index) {
 	FMOD_RESULT result = soundSystem->playSound(sounds->sound, 0, false, &channel);

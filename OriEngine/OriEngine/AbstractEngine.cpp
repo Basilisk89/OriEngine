@@ -1,5 +1,6 @@
 #include "AbstractEngine.h"
-#include "Window.h"
+
+#include <iostream>
 using namespace OriEngine;
 AbstractEngine *AbstractEngine::appInstance = nullptr;
 AbstractEngine::AbstractEngine(){
@@ -10,8 +11,11 @@ AbstractEngine::~AbstractEngine(){
 	cleanUp();
 }
 AbstractEngine* AbstractEngine::getInstance() {
-	//DebugLogger::getInstance().log(DebugLogger::INFO, "AbstractEngine", "getInstance", __FILE__, __LINE__, "Engine Started");
-	return appInstance;
+	if (!appInstance) {
+		return nullptr;
+	}else {
+		return appInstance;
+	}
 }
 void AbstractEngine::onCreate() {
 
@@ -23,13 +27,8 @@ void AbstractEngine::onCreate() {
 		lastFrameStartTime = Clock::getTime();
 		lastFrameFinishTime = Clock::getTime();
 	
-		window.SetWindowSize(800, 600);
-		bool winError = window.Initialize();
-		if (winError != true) {
-		
-		}else {
-		
-		}
+	
+
 	
 			
 	}
@@ -47,10 +46,10 @@ void AbstractEngine::startRender(){
 		
 }
 void AbstractEngine::preRender(double time) {
-
+	std::cout << time << std::endl;
 }
-void AbstractEngine::render() const {
-
+void AbstractEngine::render()  {
+	renderer.drawPrimative();
 }
 void AbstractEngine::postRender()  {
 
@@ -71,30 +70,12 @@ void AbstractEngine::endRender(){
 void AbstractEngine::cleanUp()  {
 	delete appInstance;
 	appInstance = nullptr;
-	window.Shutdown();
+	
 	
 }
 
 void OriEngine::AbstractEngine::handleEvents()
 {
-	SDL_Event e;
-	while(SDL_PollEvent(&e)) {
-		switch (e.type) {
-		case SDL_EventType::SDL_QUIT:
-			exit(1);
-			return;
-		case SDL_EventType::SDL_MOUSEBUTTONDOWN:
-
-
-		case SDL_EventType::SDL_MOUSEBUTTONUP:
-
-
-		case SDL_EventType::SDL_MOUSEMOTION:
-
-
-			break;
-		default:
-			break;
-		}
-	}
+	
+	
 }
