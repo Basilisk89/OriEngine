@@ -1,0 +1,254 @@
+\hypertarget{class_ori_engine_1_1_abstract_engine}{}\section{Ori\+Engine\+:\+:Abstract\+Engine Class Reference}
+\label{class_ori_engine_1_1_abstract_engine}\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+
+
+{\ttfamily \#include $<$Abstract\+Engine.\+h$>$}
+
+Inheritance diagram for Ori\+Engine\+:\+:Abstract\+Engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ori_engine_1_1_abstract_engine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_ori_engine_1_1_abstract_engine_a7359c90344c928e283d177159780646e}{on\+Create} ()=0
+\item 
+void \hyperlink{class_ori_engine_1_1_abstract_engine_ad969514426afbd6818caea13a538c565}{init} ()
+\item 
+virtual void \hyperlink{class_ori_engine_1_1_abstract_engine_a132e10c2452afe2d555ac85ea1b48845}{pre\+Render} (double time)
+\item 
+virtual void \hyperlink{class_ori_engine_1_1_abstract_engine_a12ce6df5383341e36fd674a5e026bf3f}{post\+Render} ()
+\item 
+void \hyperlink{class_ori_engine_1_1_abstract_engine_a6a9cec01e078695703f9def8e3814dbf}{end\+Render} ()
+\item 
+void \hyperlink{class_ori_engine_1_1_abstract_engine_ae406e1718ed7da4d0ff074f91bd2d4b7}{start\+Render} ()
+\item 
+void \hyperlink{class_ori_engine_1_1_abstract_engine_aa88ad7f1c4168f03139f33d467b0a9d0}{render} () const
+\item 
+void \hyperlink{class_ori_engine_1_1_abstract_engine_a8c77cd4669df9193d5283cf48bee3b94}{clean\+Up} ()
+\item 
+\hyperlink{class_ori_engine_1_1_abstract_renderer}{Abstract\+Renderer} $\ast$ \hyperlink{class_ori_engine_1_1_abstract_engine_a06eb88e86a88b9dbd392b6a789a3d91e}{get\+Renderer} ()
+\item 
+bool \hyperlink{class_ori_engine_1_1_abstract_engine_af02f0fa50c8ef658e3ff892aa8d8a264}{still\+Rendering} ()
+\item 
+std\+::string \hyperlink{class_ori_engine_1_1_abstract_engine_a41b34e146f5b19e40dc3f1cb1343d4d6}{get\+Name} ()
+\item 
+\hyperlink{class_ori_engine_1_1_abstract_engine_acb8473107540b7ed52eadce12bc69a81}{$\sim$\+Abstract\+Engine} ()
+\item 
+\hyperlink{class_ori_engine_1_1_abstract_engine_aca590b0d9aa8d7f6b907b2ea575f52d8}{Abstract\+Engine} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_ori_engine_1_1_abstract_engine}{Abstract\+Engine} $\ast$ \hyperlink{class_ori_engine_1_1_abstract_engine_a650375136fb726707d36acbf9f7ed3b8}{get\+Instance} ()
+\item 
+static void \hyperlink{class_ori_engine_1_1_abstract_engine_a03fcd9fd70108afd53924b0f9d2724a3}{log} (\hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5}{Debug\+Logger\+::\+Msg\+Type} msg\+Type, std\+::string method, std\+::string \+\_\+class, std\+::string file, int line, std\+::string msg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ori_engine_1_1_open_gl_renderer}{Open\+Gl\+Renderer} $\ast$ \hyperlink{class_ori_engine_1_1_abstract_engine_ab1a0fbe17c1ddf528a9863b8b3e19d41}{renderer}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_ori_engine_1_1_abstract_engine_a0d5405beaacf6c596046a66986e7573a}{Application\+Name} = \char`\"{}Ori \hyperlink{_skeletal_engine_8cpp_a67e670c1f33b20215b3721b4a515deb2}{Engine}\char`\"{}
+\item 
+double \hyperlink{class_ori_engine_1_1_abstract_engine_a34aa336df066d8c50363cf6260fcd268}{game\+Start\+Time}
+\item 
+double \hyperlink{class_ori_engine_1_1_abstract_engine_a8b839c3500a3156be543f1119f280a81}{last\+Frame\+Finish\+Time}
+\item 
+double \hyperlink{class_ori_engine_1_1_abstract_engine_a28d43c329a702901905e6b2aee2f23f7}{last\+Frame\+Start\+Time}
+\item 
+double \hyperlink{class_ori_engine_1_1_abstract_engine_a98601d59527aa41d264c07ec6cfb3fde}{frame\+Avg\+Total}
+\item 
+int \hyperlink{class_ori_engine_1_1_abstract_engine_a878214e5c90997da1b783cd14eb19c6e}{frame\+Avg\+Number}
+\item 
+int \hyperlink{class_ori_engine_1_1_abstract_engine_ad6ff48352c89ad50432a017a167dd860}{frame\+Avg\+Max\+Number}
+\item 
+\hyperlink{class_ori_engine_1_1_window}{Window} $\ast$ \hyperlink{class_ori_engine_1_1_abstract_engine_a19fb6e3400090763c2459f7ee412ca14}{window}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_ori_engine_1_1_abstract_engine}{Abstract\+Engine} $\ast$ \hyperlink{class_ori_engine_1_1_abstract_engine_a2a20dacf864ea1a8136e7531fa901932}{app\+Instance} = nullptr
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ori_engine_1_1_abstract_engine_acb8473107540b7ed52eadce12bc69a81}{}\label{class_ori_engine_1_1_abstract_engine_acb8473107540b7ed52eadce12bc69a81} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!````~Abstract\+Engine@{$\sim$\+Abstract\+Engine}}
+\index{````~Abstract\+Engine@{$\sim$\+Abstract\+Engine}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{$\sim$\+Abstract\+Engine()}{~AbstractEngine()}}
+{\footnotesize\ttfamily Abstract\+Engine\+::$\sim$\+Abstract\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_aca590b0d9aa8d7f6b907b2ea575f52d8}{}\label{class_ori_engine_1_1_abstract_engine_aca590b0d9aa8d7f6b907b2ea575f52d8} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!Abstract\+Engine@{Abstract\+Engine}}
+\index{Abstract\+Engine@{Abstract\+Engine}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{Abstract\+Engine()}{AbstractEngine()}}
+{\footnotesize\ttfamily Abstract\+Engine\+::\+Abstract\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ori_engine_1_1_abstract_engine_a8c77cd4669df9193d5283cf48bee3b94}{}\label{class_ori_engine_1_1_abstract_engine_a8c77cd4669df9193d5283cf48bee3b94} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!clean\+Up@{clean\+Up}}
+\index{clean\+Up@{clean\+Up}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{clean\+Up()}{cleanUp()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a6a9cec01e078695703f9def8e3814dbf}{}\label{class_ori_engine_1_1_abstract_engine_a6a9cec01e078695703f9def8e3814dbf} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!end\+Render@{end\+Render}}
+\index{end\+Render@{end\+Render}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{end\+Render()}{endRender()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::end\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a650375136fb726707d36acbf9f7ed3b8}{}\label{class_ori_engine_1_1_abstract_engine_a650375136fb726707d36acbf9f7ed3b8} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_abstract_engine}{Abstract\+Engine} $\ast$ Abstract\+Engine\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a41b34e146f5b19e40dc3f1cb1343d4d6}{}\label{class_ori_engine_1_1_abstract_engine_a41b34e146f5b19e40dc3f1cb1343d4d6} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string Ori\+Engine\+::\+Abstract\+Engine\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a06eb88e86a88b9dbd392b6a789a3d91e}{}\label{class_ori_engine_1_1_abstract_engine_a06eb88e86a88b9dbd392b6a789a3d91e} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!get\+Renderer@{get\+Renderer}}
+\index{get\+Renderer@{get\+Renderer}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{get\+Renderer()}{getRenderer()}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_abstract_renderer}{Abstract\+Renderer}$\ast$ Ori\+Engine\+::\+Abstract\+Engine\+::get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_ad969514426afbd6818caea13a538c565}{}\label{class_ori_engine_1_1_abstract_engine_ad969514426afbd6818caea13a538c565} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!init@{init}}
+\index{init@{init}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a03fcd9fd70108afd53924b0f9d2724a3}{}\label{class_ori_engine_1_1_abstract_engine_a03fcd9fd70108afd53924b0f9d2724a3} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!log@{log}}
+\index{log@{log}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily static void Ori\+Engine\+::\+Abstract\+Engine\+::log (\begin{DoxyParamCaption}\item[{\hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5}{Debug\+Logger\+::\+Msg\+Type}}]{msg\+Type,  }\item[{std\+::string}]{method,  }\item[{std\+::string}]{\+\_\+class,  }\item[{std\+::string}]{file,  }\item[{int}]{line,  }\item[{std\+::string}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a7359c90344c928e283d177159780646e}{}\label{class_ori_engine_1_1_abstract_engine_a7359c90344c928e283d177159780646e} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!on\+Create@{on\+Create}}
+\index{on\+Create@{on\+Create}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{on\+Create()}{onCreate()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::on\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_skeletal_engine_aa947bae905c4e4628bfe5036b4943a08}{Skeletal\+Engine}.
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a12ce6df5383341e36fd674a5e026bf3f}{}\label{class_ori_engine_1_1_abstract_engine_a12ce6df5383341e36fd674a5e026bf3f} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!post\+Render@{post\+Render}}
+\index{post\+Render@{post\+Render}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{post\+Render()}{postRender()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_skeletal_engine_a58981a23dad5e0bf14aadede98bba12f}{Skeletal\+Engine}.
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a132e10c2452afe2d555ac85ea1b48845}{}\label{class_ori_engine_1_1_abstract_engine_a132e10c2452afe2d555ac85ea1b48845} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!pre\+Render@{pre\+Render}}
+\index{pre\+Render@{pre\+Render}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{pre\+Render()}{preRender()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::pre\+Render (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_skeletal_engine_a9d3352322b1c4c8aa6332765e8efcde6}{Skeletal\+Engine}.
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_aa88ad7f1c4168f03139f33d467b0a9d0}{}\label{class_ori_engine_1_1_abstract_engine_aa88ad7f1c4168f03139f33d467b0a9d0} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!render@{render}}
+\index{render@{render}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_ae406e1718ed7da4d0ff074f91bd2d4b7}{}\label{class_ori_engine_1_1_abstract_engine_ae406e1718ed7da4d0ff074f91bd2d4b7} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!start\+Render@{start\+Render}}
+\index{start\+Render@{start\+Render}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{start\+Render()}{startRender()}}
+{\footnotesize\ttfamily void Abstract\+Engine\+::start\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_af02f0fa50c8ef658e3ff892aa8d8a264}{}\label{class_ori_engine_1_1_abstract_engine_af02f0fa50c8ef658e3ff892aa8d8a264} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!still\+Rendering@{still\+Rendering}}
+\index{still\+Rendering@{still\+Rendering}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{still\+Rendering()}{stillRendering()}}
+{\footnotesize\ttfamily bool Ori\+Engine\+::\+Abstract\+Engine\+::still\+Rendering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_ori_engine_1_1_abstract_engine_a2a20dacf864ea1a8136e7531fa901932}{}\label{class_ori_engine_1_1_abstract_engine_a2a20dacf864ea1a8136e7531fa901932} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!app\+Instance@{app\+Instance}}
+\index{app\+Instance@{app\+Instance}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{app\+Instance}{appInstance}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_abstract_engine}{Abstract\+Engine} $\ast$ Abstract\+Engine\+::app\+Instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a0d5405beaacf6c596046a66986e7573a}{}\label{class_ori_engine_1_1_abstract_engine_a0d5405beaacf6c596046a66986e7573a} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!Application\+Name@{Application\+Name}}
+\index{Application\+Name@{Application\+Name}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{Application\+Name}{ApplicationName}}
+{\footnotesize\ttfamily std\+::string Ori\+Engine\+::\+Abstract\+Engine\+::\+Application\+Name = \char`\"{}Ori \hyperlink{_skeletal_engine_8cpp_a67e670c1f33b20215b3721b4a515deb2}{Engine}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_ad6ff48352c89ad50432a017a167dd860}{}\label{class_ori_engine_1_1_abstract_engine_ad6ff48352c89ad50432a017a167dd860} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!frame\+Avg\+Max\+Number@{frame\+Avg\+Max\+Number}}
+\index{frame\+Avg\+Max\+Number@{frame\+Avg\+Max\+Number}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{frame\+Avg\+Max\+Number}{frameAvgMaxNumber}}
+{\footnotesize\ttfamily int Ori\+Engine\+::\+Abstract\+Engine\+::frame\+Avg\+Max\+Number\hspace{0.3cm}{\ttfamily [private]}}
+
+The maximum number of frames used to calculate the frame rate \hypertarget{class_ori_engine_1_1_abstract_engine_a878214e5c90997da1b783cd14eb19c6e}{}\label{class_ori_engine_1_1_abstract_engine_a878214e5c90997da1b783cd14eb19c6e} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!frame\+Avg\+Number@{frame\+Avg\+Number}}
+\index{frame\+Avg\+Number@{frame\+Avg\+Number}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{frame\+Avg\+Number}{frameAvgNumber}}
+{\footnotesize\ttfamily int Ori\+Engine\+::\+Abstract\+Engine\+::frame\+Avg\+Number\hspace{0.3cm}{\ttfamily [private]}}
+
+A count of the number of frames in the current total \hypertarget{class_ori_engine_1_1_abstract_engine_a98601d59527aa41d264c07ec6cfb3fde}{}\label{class_ori_engine_1_1_abstract_engine_a98601d59527aa41d264c07ec6cfb3fde} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!frame\+Avg\+Total@{frame\+Avg\+Total}}
+\index{frame\+Avg\+Total@{frame\+Avg\+Total}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{frame\+Avg\+Total}{frameAvgTotal}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Abstract\+Engine\+::frame\+Avg\+Total\hspace{0.3cm}{\ttfamily [private]}}
+
+An accumulator used to add time for last few avg frames to calc frame rate \hypertarget{class_ori_engine_1_1_abstract_engine_a34aa336df066d8c50363cf6260fcd268}{}\label{class_ori_engine_1_1_abstract_engine_a34aa336df066d8c50363cf6260fcd268} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!game\+Start\+Time@{game\+Start\+Time}}
+\index{game\+Start\+Time@{game\+Start\+Time}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{game\+Start\+Time}{gameStartTime}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Abstract\+Engine\+::game\+Start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a8b839c3500a3156be543f1119f280a81}{}\label{class_ori_engine_1_1_abstract_engine_a8b839c3500a3156be543f1119f280a81} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!last\+Frame\+Finish\+Time@{last\+Frame\+Finish\+Time}}
+\index{last\+Frame\+Finish\+Time@{last\+Frame\+Finish\+Time}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{last\+Frame\+Finish\+Time}{lastFrameFinishTime}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Abstract\+Engine\+::last\+Frame\+Finish\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+The time the last frame rendering was complete \hypertarget{class_ori_engine_1_1_abstract_engine_a28d43c329a702901905e6b2aee2f23f7}{}\label{class_ori_engine_1_1_abstract_engine_a28d43c329a702901905e6b2aee2f23f7} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!last\+Frame\+Start\+Time@{last\+Frame\+Start\+Time}}
+\index{last\+Frame\+Start\+Time@{last\+Frame\+Start\+Time}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{last\+Frame\+Start\+Time}{lastFrameStartTime}}
+{\footnotesize\ttfamily double Ori\+Engine\+::\+Abstract\+Engine\+::last\+Frame\+Start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+The time the last frame started rendering \hypertarget{class_ori_engine_1_1_abstract_engine_ab1a0fbe17c1ddf528a9863b8b3e19d41}{}\label{class_ori_engine_1_1_abstract_engine_ab1a0fbe17c1ddf528a9863b8b3e19d41} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!renderer@{renderer}}
+\index{renderer@{renderer}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_open_gl_renderer}{Open\+Gl\+Renderer}$\ast$ Ori\+Engine\+::\+Abstract\+Engine\+::renderer}
+
+\hypertarget{class_ori_engine_1_1_abstract_engine_a19fb6e3400090763c2459f7ee412ca14}{}\label{class_ori_engine_1_1_abstract_engine_a19fb6e3400090763c2459f7ee412ca14} 
+\index{Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}!window@{window}}
+\index{window@{window}!Ori\+Engine\+::\+Abstract\+Engine@{Ori\+Engine\+::\+Abstract\+Engine}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_window}{Window}$\ast$ Ori\+Engine\+::\+Abstract\+Engine\+::window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_abstract_engine_8h}{Abstract\+Engine.\+h}\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_abstract_engine_8cpp}{Abstract\+Engine.\+cpp}\end{DoxyCompactItemize}

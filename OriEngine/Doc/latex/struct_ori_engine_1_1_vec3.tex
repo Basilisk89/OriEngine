@@ -1,0 +1,260 @@
+\hypertarget{struct_ori_engine_1_1_vec3}{}\section{Ori\+Engine\+:\+:Vec3 Struct Reference}
+\label{struct_ori_engine_1_1_vec3}\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+
+
+{\ttfamily \#include $<$Vector.\+h$>$}
+
+Inheritance diagram for Ori\+Engine\+:\+:Vec3\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_ori_engine_1_1_vec3}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_ori_engine_1_1_vec3_a5b144d090843acf90840393a1099a228}{Load} (float \+\_\+x, float \+\_\+y, float \+\_\+z)
+\begin{DoxyCompactList}\small\item\em Structures are default public! \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_vec3_a36bb2140a6a15310e08b4daaaf9a3909}{Vec3} (float s=float(0.\+0))
+\begin{DoxyCompactList}\small\item\em Here\textquotesingle{}s a set of constructors. \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_vec3_af2c77725c493c84a934fb358b311d87e}{Vec3} (float \+\_\+x, float \+\_\+y, float \+\_\+z)
+\item 
+\hyperlink{struct_ori_engine_1_1_vec3_adb231ac012b0ca1101b7e340bf2a72b0}{Vec3} (const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v)
+\begin{DoxyCompactList}\small\item\em A copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \& \hyperlink{struct_ori_engine_1_1_vec3_ab162ac7e06cb783bccc3375f9c75308a}{operator=} (const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v)
+\begin{DoxyCompactList}\small\item\em Operator overloads (see note 1 at the end of this file) \end{DoxyCompactList}\item 
+const float \hyperlink{struct_ori_engine_1_1_vec3_a536dde0bfab3d42f2bae717b3b58df62}{operator\mbox{[}$\,$\mbox{]}} (int index) const
+\begin{DoxyCompactList}\small\item\em Now we can use the \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} like an array but we\textquotesingle{}ll need two overloads. \end{DoxyCompactList}\item 
+float \& \hyperlink{struct_ori_engine_1_1_vec3_a71c0ae39cb5f864517078494ea528970}{operator\mbox{[}$\,$\mbox{]}} (int index)
+\item 
+const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \hyperlink{struct_ori_engine_1_1_vec3_a68b3819fa6b6b9ddb2d6c1d75caa0d41}{operator+} (const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v) const
+\begin{DoxyCompactList}\small\item\em Add two Vec3s. \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \& \hyperlink{struct_ori_engine_1_1_vec3_a1f77d29a453dfdf1fc75290e2824b42e}{operator+=} (const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v)
+\begin{DoxyCompactList}\small\item\em Add a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} to itself. \end{DoxyCompactList}\item 
+const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \hyperlink{struct_ori_engine_1_1_vec3_a15bce489607090ec4bda56a1d5b0c0f1}{operator-\/} () const
+\begin{DoxyCompactList}\small\item\em Take the negative of a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3}. \end{DoxyCompactList}\item 
+const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \hyperlink{struct_ori_engine_1_1_vec3_a18dacfa9dfb456dd11e58a7be4f01e8d}{operator-\/} (const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v) const
+\begin{DoxyCompactList}\small\item\em Subtract two Vec3s. \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \& \hyperlink{struct_ori_engine_1_1_vec3_a5ced07421d0576122c0179517947039b}{operator-\/=} (const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v)
+\begin{DoxyCompactList}\small\item\em Subtract a Vec 3 from itself. \end{DoxyCompactList}\item 
+const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \hyperlink{struct_ori_engine_1_1_vec3_ac32d680353a0bdf43f6ab113834e1986}{operator$\ast$} (const float s) const
+\begin{DoxyCompactList}\small\item\em Multiply a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} by a scalar. \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \& \hyperlink{struct_ori_engine_1_1_vec3_a93473080cc10ee1c3554a9557d467215}{operator$\ast$=} (const float s)
+\begin{DoxyCompactList}\small\item\em Multiply a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} by a scalar and assign it to itself. \end{DoxyCompactList}\item 
+const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \hyperlink{struct_ori_engine_1_1_vec3_ae3a5cf75e250a543b1045be44b954950}{operator/} (const float s) const
+\begin{DoxyCompactList}\small\item\em Divide by a scalar -\/ Watch for divide by zero issues. \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \& \hyperlink{struct_ori_engine_1_1_vec3_a8931b41bd47e616624c49320bd83e959}{operator/=} (const float s)
+\item 
+void \hyperlink{struct_ori_engine_1_1_vec3_a87155de383da7584fbe0725b3a4e371d}{print} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{struct_ori_engine_1_1_vec3_a2682de13a3ac0391777172f7f0af4027}{x}
+\item 
+float \hyperlink{struct_ori_engine_1_1_vec3_af7815329fe7e5d909afea88c87ac9ff6}{y}
+\item 
+float \hyperlink{struct_ori_engine_1_1_vec3_a9d4a41bdb6ce600fa8a23d27752ba2d1}{z}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \hyperlink{struct_ori_engine_1_1_vec3_aadc3cbbff02e566f5b84a5cccc5e0fa0}{operator$\ast$} (const float s, const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_ori_engine_1_1_vec3_a36bb2140a6a15310e08b4daaaf9a3909}{}\label{struct_ori_engine_1_1_vec3_a36bb2140a6a15310e08b4daaaf9a3909} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!Vec3@{Vec3}}
+\index{Vec3@{Vec3}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{Vec3()}{Vec3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Vec3\+::\+Vec3 (\begin{DoxyParamCaption}\item[{float}]{s = {\ttfamily float(0.0)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Here\textquotesingle{}s a set of constructors. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_af2c77725c493c84a934fb358b311d87e}{}\label{struct_ori_engine_1_1_vec3_af2c77725c493c84a934fb358b311d87e} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!Vec3@{Vec3}}
+\index{Vec3@{Vec3}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{Vec3()}{Vec3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Vec3\+::\+Vec3 (\begin{DoxyParamCaption}\item[{float}]{\+\_\+x,  }\item[{float}]{\+\_\+y,  }\item[{float}]{\+\_\+z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{struct_ori_engine_1_1_vec3_adb231ac012b0ca1101b7e340bf2a72b0}{}\label{struct_ori_engine_1_1_vec3_adb231ac012b0ca1101b7e340bf2a72b0} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!Vec3@{Vec3}}
+\index{Vec3@{Vec3}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{Vec3()}{Vec3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Vec3\+::\+Vec3 (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A copy constructor. 
+
+In this context \char`\"{}const\char`\"{} means I promise not to modify anything v points to 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_ori_engine_1_1_vec3_a5b144d090843acf90840393a1099a228}{}\label{struct_ori_engine_1_1_vec3_a5b144d090843acf90840393a1099a228} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!Load@{Load}}
+\index{Load@{Load}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Ori\+Engine\+::\+Vec3\+::\+Load (\begin{DoxyParamCaption}\item[{float}]{\+\_\+x,  }\item[{float}]{\+\_\+y,  }\item[{float}]{\+\_\+z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Structures are default public! 
+
+Just a little utility to populate a vector \hypertarget{struct_ori_engine_1_1_vec3_ac32d680353a0bdf43f6ab113834e1986}{}\label{struct_ori_engine_1_1_vec3_ac32d680353a0bdf43f6ab113834e1986} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} Ori\+Engine\+::\+Vec3\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiply a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} by a scalar. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_a93473080cc10ee1c3554a9557d467215}{}\label{struct_ori_engine_1_1_vec3_a93473080cc10ee1c3554a9557d467215} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \hyperlink{struct_ori_engine_1_1_vec3}{Vec3}\& Ori\+Engine\+::\+Vec3\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const float}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiply a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} by a scalar and assign it to itself. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_a68b3819fa6b6b9ddb2d6c1d75caa0d41}{}\label{struct_ori_engine_1_1_vec3_a68b3819fa6b6b9ddb2d6c1d75caa0d41} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator+@{operator+}}
+\index{operator+@{operator+}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} Ori\+Engine\+::\+Vec3\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add two Vec3s. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_a1f77d29a453dfdf1fc75290e2824b42e}{}\label{struct_ori_engine_1_1_vec3_a1f77d29a453dfdf1fc75290e2824b42e} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{struct_ori_engine_1_1_vec3}{Vec3}\& Ori\+Engine\+::\+Vec3\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} to itself. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_a15bce489607090ec4bda56a1d5b0c0f1}{}\label{struct_ori_engine_1_1_vec3_a15bce489607090ec4bda56a1d5b0c0f1} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} Ori\+Engine\+::\+Vec3\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Take the negative of a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3}. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_a18dacfa9dfb456dd11e58a7be4f01e8d}{}\label{struct_ori_engine_1_1_vec3_a18dacfa9dfb456dd11e58a7be4f01e8d} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} Ori\+Engine\+::\+Vec3\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtract two Vec3s. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_a5ced07421d0576122c0179517947039b}{}\label{struct_ori_engine_1_1_vec3_a5ced07421d0576122c0179517947039b} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \hyperlink{struct_ori_engine_1_1_vec3}{Vec3}\& Ori\+Engine\+::\+Vec3\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtract a Vec 3 from itself. 
+
+\hypertarget{struct_ori_engine_1_1_vec3_ae3a5cf75e250a543b1045be44b954950}{}\label{struct_ori_engine_1_1_vec3_ae3a5cf75e250a543b1045be44b954950} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator/@{operator/}}
+\index{operator/@{operator/}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} Ori\+Engine\+::\+Vec3\+::operator/ (\begin{DoxyParamCaption}\item[{const float}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Divide by a scalar -\/ Watch for divide by zero issues. 
+
+If in debug mode let\textquotesingle{}s worry about divide by zero or nearly zero!!! \hypertarget{struct_ori_engine_1_1_vec3_a8931b41bd47e616624c49320bd83e959}{}\label{struct_ori_engine_1_1_vec3_a8931b41bd47e616624c49320bd83e959} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \hyperlink{struct_ori_engine_1_1_vec3}{Vec3}\& Ori\+Engine\+::\+Vec3\+::operator/= (\begin{DoxyParamCaption}\item[{const float}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If in debug mode let\textquotesingle{}s worry about divide by zero or nearly zero!!! \hypertarget{struct_ori_engine_1_1_vec3_ab162ac7e06cb783bccc3375f9c75308a}{}\label{struct_ori_engine_1_1_vec3_ab162ac7e06cb783bccc3375f9c75308a} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator=@{operator=}}
+\index{operator=@{operator=}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{struct_ori_engine_1_1_vec3}{Vec3}\& Ori\+Engine\+::\+Vec3\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator overloads (see note 1 at the end of this file) 
+
+An assignment operator \hypertarget{struct_ori_engine_1_1_vec3_a536dde0bfab3d42f2bae717b3b58df62}{}\label{struct_ori_engine_1_1_vec3_a536dde0bfab3d42f2bae717b3b58df62} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const float Ori\+Engine\+::\+Vec3\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Now we can use the \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} like an array but we\textquotesingle{}ll need two overloads. 
+
+This one is for reading the \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} as if where an array \hypertarget{struct_ori_engine_1_1_vec3_a71c0ae39cb5f864517078494ea528970}{}\label{struct_ori_engine_1_1_vec3_a71c0ae39cb5f864517078494ea528970} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float\& Ori\+Engine\+::\+Vec3\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This one is for writing to the \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} as if where an array.
+
+See note 2 at the end of this file about lvalues and rvalues \hypertarget{struct_ori_engine_1_1_vec3_a87155de383da7584fbe0725b3a4e371d}{}\label{struct_ori_engine_1_1_vec3_a87155de383da7584fbe0725b3a4e371d} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!print@{print}}
+\index{print@{print}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Ori\+Engine\+::\+Vec3\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{struct_ori_engine_1_1_vec3_aadc3cbbff02e566f5b84a5cccc5e0fa0}{}\label{struct_ori_engine_1_1_vec3_aadc3cbbff02e566f5b84a5cccc5e0fa0} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} operator$\ast$ (\begin{DoxyParamCaption}\item[{const float}]{s,  }\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Multiply a scaler by a \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} -\/ Ha! It\textquotesingle{}s the scalar first then the \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} Overloaded and a friend, ouch! It\textquotesingle{}s the only way to make it work with a scalar first. Friends are tricky, look them up. 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_ori_engine_1_1_vec3_a2682de13a3ac0391777172f7f0af4027}{}\label{struct_ori_engine_1_1_vec3_a2682de13a3ac0391777172f7f0af4027} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!x@{x}}
+\index{x@{x}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Ori\+Engine\+::\+Vec3\+::x}
+
+\hypertarget{struct_ori_engine_1_1_vec3_af7815329fe7e5d909afea88c87ac9ff6}{}\label{struct_ori_engine_1_1_vec3_af7815329fe7e5d909afea88c87ac9ff6} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!y@{y}}
+\index{y@{y}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Ori\+Engine\+::\+Vec3\+::y}
+
+\hypertarget{struct_ori_engine_1_1_vec3_a9d4a41bdb6ce600fa8a23d27752ba2d1}{}\label{struct_ori_engine_1_1_vec3_a9d4a41bdb6ce600fa8a23d27752ba2d1} 
+\index{Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}!z@{z}}
+\index{z@{z}!Ori\+Engine\+::\+Vec3@{Ori\+Engine\+::\+Vec3}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily float Ori\+Engine\+::\+Vec3\+::z}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_vector_8h}{Vector.\+h}\end{DoxyCompactItemize}

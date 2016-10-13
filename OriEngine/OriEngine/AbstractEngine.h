@@ -2,21 +2,27 @@
 #define ABSTRACTENGINE_H
 #pragma once
 #include <memory>
+#include <Windows.h>
+#include "MusicSystem.h"
 #include "DebugLogger.h"
 #include "Clock.h"
 #include "OpenGlRenderer.h"
 namespace OriEngine {
 	class AbstractEngine {
 	public:
+		OpenGlRenderer renderer;
+		MusicSystem musicSystem;
 		static AbstractEngine* getInstance();
-	    virtual void onCreate() = 0 ;
+	    virtual void onCreate() ;
 		void init();
 	    virtual void preRender(double time) ;
 	    virtual void postRender() ;
 		void endRender();
 		void startRender();
-	     void render() const;
+	     void render();
 		 void cleanUp() ;
+		 void handleEvents();
+
 		 bool stillRendering() {
 			 return true;
 		 }
@@ -42,7 +48,7 @@ namespace OriEngine {
 		int							frameAvgNumber;
 		/** The maximum number of frames used to calculate the frame rate */
 		int							frameAvgMaxNumber;
-		AbstractRenderer* renderer;
+		
 	protected:
 	};
 }

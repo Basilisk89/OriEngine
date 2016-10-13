@@ -5,10 +5,10 @@
 namespace OriEngine {
 	class Clock	{
 	public:
-		 static LARGE_INTEGER counter,time,freq;
-		 static double start, end, deltaTime;
+		 static LARGE_INTEGER counter,time,freq,start,end;
+		 static double  deltaTime;
 		 static bool highResClock;
-		 static inline LARGE_INTEGER getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER e);
+		 static inline double getCounterDifference(LARGE_INTEGER s, LARGE_INTEGER e);
 		 static inline double lastFrame(double now, double last);
 		 static inline LARGE_INTEGER getCurrentTicks() {
 			 LARGE_INTEGER result;
@@ -27,8 +27,9 @@ namespace OriEngine {
 			 return LARGE_INTEGER(li);
 		 }
 	
-		 static void elapsedTime();
+		 static double elapsedTime();
 		 static void init(); 
+		 static void getEnd();
 		 static inline double ticksToSeconds(LARGE_INTEGER ticks)
 		 {
 			 return ((double)ticks.QuadPart) / ((double)time.QuadPart);

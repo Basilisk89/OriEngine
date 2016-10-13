@@ -1,36 +1,36 @@
 #include "OpenGlRenderer.h"
-#include <glut-3.7.6\include\GL\glut.h>
-using namespace OriEngine;
 
-OpenGlRenderer::OpenGlRenderer(){
+using namespace OriEngine;
 	
+OpenGlRenderer::OpenGlRenderer(){	
 }
 OpenGlRenderer::~OpenGlRenderer(){
 }
 void OpenGlRenderer::drawPrimative() {
-	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };	// default CCW winding
-
-		GLuint vao, vbo;
-	glGenVertexArrays(1, &vao);
+	
 	glBindVertexArray(vao);
-	glGenBuffers(1, &vbo);
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glDrawArrays(GL_TRIANGLES, 0, 3);
 	
-		glBufferData(GL_ARRAY_BUFFER, 3 * sizeof(float), verts, GL_STATIC_DRAW);
+			
 	
-		glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	
-		glDrawArrays(GL_TRIANGLES, 0, 3);
-
 }
 void OpenGlRenderer::init() {
-	glewExperimental = true;
-	
-	DebugLogger::getInstance().log(DebugLogger::INFO, "AbstractEngine", "getInstance", __FILE__, __LINE__, "Engine Started");
+	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };
+	bool primSetup = false;
+	if (!primSetup)
+	{
 
-	
-	versionInfo();
+		glGenVertexArrays(1, &vao);
+		glBindVertexArray(vao);
+		glGenBuffers(1, &vbo);
+		glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
+		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), verts, GL_STATIC_DRAW);
+		glEnableVertexAttribArray(0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+		primSetup = true;
+	}
 }
 void OpenGlRenderer::versionInfo() {
 	/// You can (and probably need) to get some info regarding versions and manufacturer

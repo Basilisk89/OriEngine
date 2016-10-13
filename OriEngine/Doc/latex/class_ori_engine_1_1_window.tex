@@ -1,0 +1,226 @@
+\hypertarget{class_ori_engine_1_1_window}{}\section{Ori\+Engine\+:\+:Window Class Reference}
+\label{class_ori_engine_1_1_window}\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ori_engine_1_1_window_a74e6087da23d3c24e9fac0245e5ec92c}{Window} ()
+\item 
+\hyperlink{class_ori_engine_1_1_window_a16f73e151437c63953a6396aa80b686f}{Window} (const \hyperlink{class_ori_engine_1_1_window}{Window} \&)=delete
+\item 
+\hyperlink{class_ori_engine_1_1_window_acda5b9ba9a89a8bd8df298c1cedb71a8}{Window} (\hyperlink{class_ori_engine_1_1_window}{Window} \&\&)=delete
+\item 
+\hyperlink{class_ori_engine_1_1_window}{Window} \& \hyperlink{class_ori_engine_1_1_window_aad30c448f70cb9f20641289765e23350}{operator=} (const \hyperlink{class_ori_engine_1_1_window}{Window} \&)=delete
+\item 
+\hyperlink{class_ori_engine_1_1_window}{Window} \& \hyperlink{class_ori_engine_1_1_window_a54a09c75fc36036859b93c276ca834fa}{operator=} (\hyperlink{class_ori_engine_1_1_window}{Window} \&\&)=delete
+\item 
+\hyperlink{class_ori_engine_1_1_window_a245d821e6016fa1f6970ccbbedd635f6}{$\sim$\+Window} ()
+\item 
+bool \hyperlink{class_ori_engine_1_1_window_a41cab6dae60380563b8bc593e87f0c87}{Initialize} ()
+\item 
+void \hyperlink{class_ori_engine_1_1_window_a89c434ec340b4594c6c8af3f0bf58c9b}{Shutdown} ()
+\item 
+void \hyperlink{class_ori_engine_1_1_window_a21db050c674219f29a985694739ff31e}{Set\+Window\+Size} (const int Width\+\_\+, const int Height\+\_\+)
+\item 
+void \hyperlink{class_ori_engine_1_1_window_a65149d93f9842363f53bdc3e07f459a6}{Toggle\+Full\+Screen} ()
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \hyperlink{class_ori_engine_1_1_window_acf146679abf09abf89941b1882fc92dc}{get\+Window} () const
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{class_ori_engine_1_1_window_a53ff5d3c56b28604d41b676bfdbf5129}{get\+Rect} ()
+\item 
+int \hyperlink{class_ori_engine_1_1_window_a451bdfeab37afce97712f23f5c2492aa}{Get\+Width} () const
+\item 
+int \hyperlink{class_ori_engine_1_1_window_a2196b5ae099037272cc85b223e80bd6d}{Get\+Height} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_ori_engine_1_1_window_a8e80d9499f2968b20492b517006cc1b3}{get\+G\+L\+Info} ()
+\begin{DoxyCompactList}\small\item\em Debug info about the graphics card and version of Open\+GL installed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \hyperlink{class_ori_engine_1_1_window_ab89e66fc9f835484f073a7ac7c1ee546}{S\+D\+L\+Window}
+\item 
+S\+D\+L\+\_\+\+G\+L\+Context \hyperlink{class_ori_engine_1_1_window_a1e0582658a858b0cfa732c990a8573c0}{gl\+Context}
+\item 
+int \hyperlink{class_ori_engine_1_1_window_a3f618d387c7429ade0b51f3c76c1ebb6}{Width}
+\item 
+int \hyperlink{class_ori_engine_1_1_window_a2315cbe759b91f12618a81f47b1f4c32}{Height}
+\item 
+S\+D\+L\+\_\+\+Rect \hyperlink{class_ori_engine_1_1_window_a1e2e93b43d6b1ca022ad8393db7ac35f}{win\+Rect}
+\item 
+bool \hyperlink{class_ori_engine_1_1_window_a9a2f58afdd7d2cdd920f7c733b4b7dd6}{b\+Is\+Initialized}
+\item 
+bool \hyperlink{class_ori_engine_1_1_window_a31ccebb8ecb24ead816ae2559e1e36d2}{b\+Is\+Full\+Screen}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ori_engine_1_1_window_a74e6087da23d3c24e9fac0245e5ec92c}{}\label{class_ori_engine_1_1_window_a74e6087da23d3c24e9fac0245e5ec92c} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Window@{Window}}
+\index{Window@{Window}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_window_a16f73e151437c63953a6396aa80b686f}{}\label{class_ori_engine_1_1_window_a16f73e151437c63953a6396aa80b686f} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Window@{Window}}
+\index{Window@{Window}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ori_engine_1_1_window}{Window} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\hypertarget{class_ori_engine_1_1_window_acda5b9ba9a89a8bd8df298c1cedb71a8}{}\label{class_ori_engine_1_1_window_acda5b9ba9a89a8bd8df298c1cedb71a8} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Window@{Window}}
+\index{Window@{Window}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{\hyperlink{class_ori_engine_1_1_window}{Window} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\hypertarget{class_ori_engine_1_1_window_a245d821e6016fa1f6970ccbbedd635f6}{}\label{class_ori_engine_1_1_window_a245d821e6016fa1f6970ccbbedd635f6} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!````~Window@{$\sim$\+Window}}
+\index{````~Window@{$\sim$\+Window}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Window()}{~Window()}}
+{\footnotesize\ttfamily Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ori_engine_1_1_window_a8e80d9499f2968b20492b517006cc1b3}{}\label{class_ori_engine_1_1_window_a8e80d9499f2968b20492b517006cc1b3} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!get\+G\+L\+Info@{get\+G\+L\+Info}}
+\index{get\+G\+L\+Info@{get\+G\+L\+Info}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+G\+L\+Info()}{getGLInfo()}}
+{\footnotesize\ttfamily void Window\+::get\+G\+L\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Debug info about the graphics card and version of Open\+GL installed. 
+
+You can (and probably need) to get some info regarding versions and manufacturer
+
+You can also get the version as ints \hypertarget{class_ori_engine_1_1_window_a2196b5ae099037272cc85b223e80bd6d}{}\label{class_ori_engine_1_1_window_a2196b5ae099037272cc85b223e80bd6d} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Get\+Height()}{GetHeight()}}
+{\footnotesize\ttfamily int Window\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\hypertarget{class_ori_engine_1_1_window_a53ff5d3c56b28604d41b676bfdbf5129}{}\label{class_ori_engine_1_1_window_a53ff5d3c56b28604d41b676bfdbf5129} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!get\+Rect@{get\+Rect}}
+\index{get\+Rect@{get\+Rect}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Rect()}{getRect()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Rect Window\+::get\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_window_a451bdfeab37afce97712f23f5c2492aa}{}\label{class_ori_engine_1_1_window_a451bdfeab37afce97712f23f5c2492aa} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Get\+Width@{Get\+Width}}
+\index{Get\+Width@{Get\+Width}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Get\+Width()}{GetWidth()}}
+{\footnotesize\ttfamily int Window\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\hypertarget{class_ori_engine_1_1_window_acf146679abf09abf89941b1882fc92dc}{}\label{class_ori_engine_1_1_window_acf146679abf09abf89941b1882fc92dc} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!get\+Window@{get\+Window}}
+\index{get\+Window@{get\+Window}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{get\+Window()}{getWindow()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window $\ast$ Window\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\hypertarget{class_ori_engine_1_1_window_a41cab6dae60380563b8bc593e87f0c87}{}\label{class_ori_engine_1_1_window_a41cab6dae60380563b8bc593e87f0c87} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool Window\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+These attributes must be set before the S\+DL window is created
+
+You may need to change this to 16 or 32 depending on your graphics card
+
+Enable Depth Cueing (the Z-\/buffer)
+
+Turn on double buffering with a 24bit Z buffer.
+
+Create the S\+DL window
+
+Attach Open\+Gl to the new \hyperlink{class_ori_engine_1_1_window}{Window}
+
+Fire up the GL Extension Wrangler
+
+This makes the buffer swap syncronize with the monitor\textquotesingle{}s vertical refresh \hypertarget{class_ori_engine_1_1_window_aad30c448f70cb9f20641289765e23350}{}\label{class_ori_engine_1_1_window_aad30c448f70cb9f20641289765e23350} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!operator=@{operator=}}
+\index{operator=@{operator=}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_window}{Window}\& Ori\+Engine\+::\+Window\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ori_engine_1_1_window}{Window} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\hypertarget{class_ori_engine_1_1_window_a54a09c75fc36036859b93c276ca834fa}{}\label{class_ori_engine_1_1_window_a54a09c75fc36036859b93c276ca834fa} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!operator=@{operator=}}
+\index{operator=@{operator=}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_window}{Window}\& Ori\+Engine\+::\+Window\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_ori_engine_1_1_window}{Window} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\hypertarget{class_ori_engine_1_1_window_a21db050c674219f29a985694739ff31e}{}\label{class_ori_engine_1_1_window_a21db050c674219f29a985694739ff31e} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Set\+Window\+Size@{Set\+Window\+Size}}
+\index{Set\+Window\+Size@{Set\+Window\+Size}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Set\+Window\+Size()}{SetWindowSize()}}
+{\footnotesize\ttfamily void Window\+::\+Set\+Window\+Size (\begin{DoxyParamCaption}\item[{const int}]{Width\+\_\+,  }\item[{const int}]{Height\+\_\+ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_window_a89c434ec340b4594c6c8af3f0bf58c9b}{}\label{class_ori_engine_1_1_window_a89c434ec340b4594c6c8af3f0bf58c9b} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void Window\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_window_a65149d93f9842363f53bdc3e07f459a6}{}\label{class_ori_engine_1_1_window_a65149d93f9842363f53bdc3e07f459a6} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Toggle\+Full\+Screen@{Toggle\+Full\+Screen}}
+\index{Toggle\+Full\+Screen@{Toggle\+Full\+Screen}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Toggle\+Full\+Screen()}{ToggleFullScreen()}}
+{\footnotesize\ttfamily void Window\+::\+Toggle\+Full\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_ori_engine_1_1_window_a31ccebb8ecb24ead816ae2559e1e36d2}{}\label{class_ori_engine_1_1_window_a31ccebb8ecb24ead816ae2559e1e36d2} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!b\+Is\+Full\+Screen@{b\+Is\+Full\+Screen}}
+\index{b\+Is\+Full\+Screen@{b\+Is\+Full\+Screen}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{b\+Is\+Full\+Screen}{bIsFullScreen}}
+{\footnotesize\ttfamily bool Ori\+Engine\+::\+Window\+::b\+Is\+Full\+Screen\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_window_a9a2f58afdd7d2cdd920f7c733b4b7dd6}{}\label{class_ori_engine_1_1_window_a9a2f58afdd7d2cdd920f7c733b4b7dd6} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!b\+Is\+Initialized@{b\+Is\+Initialized}}
+\index{b\+Is\+Initialized@{b\+Is\+Initialized}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{b\+Is\+Initialized}{bIsInitialized}}
+{\footnotesize\ttfamily bool Ori\+Engine\+::\+Window\+::b\+Is\+Initialized\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_window_a1e0582658a858b0cfa732c990a8573c0}{}\label{class_ori_engine_1_1_window_a1e0582658a858b0cfa732c990a8573c0} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!gl\+Context@{gl\+Context}}
+\index{gl\+Context@{gl\+Context}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{gl\+Context}{glContext}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+G\+L\+Context Ori\+Engine\+::\+Window\+::gl\+Context\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_window_a2315cbe759b91f12618a81f47b1f4c32}{}\label{class_ori_engine_1_1_window_a2315cbe759b91f12618a81f47b1f4c32} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Height@{Height}}
+\index{Height@{Height}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily int Ori\+Engine\+::\+Window\+::\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_window_ab89e66fc9f835484f073a7ac7c1ee546}{}\label{class_ori_engine_1_1_window_ab89e66fc9f835484f073a7ac7c1ee546} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!S\+D\+L\+Window@{S\+D\+L\+Window}}
+\index{S\+D\+L\+Window@{S\+D\+L\+Window}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{S\+D\+L\+Window}{SDLWindow}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ Ori\+Engine\+::\+Window\+::\+S\+D\+L\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_window_a3f618d387c7429ade0b51f3c76c1ebb6}{}\label{class_ori_engine_1_1_window_a3f618d387c7429ade0b51f3c76c1ebb6} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!Width@{Width}}
+\index{Width@{Width}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily int Ori\+Engine\+::\+Window\+::\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_window_a1e2e93b43d6b1ca022ad8393db7ac35f}{}\label{class_ori_engine_1_1_window_a1e2e93b43d6b1ca022ad8393db7ac35f} 
+\index{Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}!win\+Rect@{win\+Rect}}
+\index{win\+Rect@{win\+Rect}!Ori\+Engine\+::\+Window@{Ori\+Engine\+::\+Window}}
+\subsubsection{\texorpdfstring{win\+Rect}{winRect}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Rect Ori\+Engine\+::\+Window\+::win\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_window_8h}{Window.\+h}\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_window_8cpp}{Window.\+cpp}\end{DoxyCompactItemize}

@@ -1,4 +1,6 @@
 #include "AbstractEngine.h"
+
+#include <iostream>
 using namespace OriEngine;
 AbstractEngine *AbstractEngine::appInstance = nullptr;
 AbstractEngine::AbstractEngine(){
@@ -8,10 +10,14 @@ AbstractEngine::~AbstractEngine(){
 	cleanUp();
 }
 AbstractEngine* AbstractEngine::getInstance() {
-	//DebugLogger::getInstance().log(DebugLogger::INFO, "AbstractEngine", "getInstance", __FILE__, __LINE__, "Engine Started");
-	return appInstance;
+	if (!appInstance) {
+		return nullptr;
+	}else {
+		return appInstance;
+	}
 }
 void AbstractEngine::onCreate() {
+
 	
 }
 	void AbstractEngine::init() {
@@ -19,8 +25,11 @@ void AbstractEngine::onCreate() {
 		Clock::init();
 		lastFrameStartTime = Clock::getTime();
 		lastFrameFinishTime = Clock::getTime();
-		renderer = new OpenGlRenderer();
-		renderer->init();
+		
+	
+
+	
+			
 	}
 void AbstractEngine::startRender(){
 	double timeSinceLastFrame = 0.0;
@@ -33,14 +42,16 @@ void AbstractEngine::startRender(){
 
 	
 		preRender(timeSinceLastFrame);
+		
 }
 void AbstractEngine::preRender(double time) {
+	std::cout << time << std::endl;
 }
-void AbstractEngine::render() const {
-//	renderer->drawPrimative();
+void AbstractEngine::render()  {
+	renderer.drawPrimative();
 }
 void AbstractEngine::postRender()  {
-	
+
 }
 void AbstractEngine::endRender(){
 	double now = Clock::getTime();
@@ -58,4 +69,12 @@ void AbstractEngine::endRender(){
 void AbstractEngine::cleanUp()  {
 	delete appInstance;
 	appInstance = nullptr;
+	
+	
+}
+
+void OriEngine::AbstractEngine::handleEvents()
+{
+	
+	
 }
