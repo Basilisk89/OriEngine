@@ -1,0 +1,106 @@
+\hypertarget{struct_ori_engine_1_1_plane}{}\section{Ori\+Engine\+:\+:Plane Struct Reference}
+\label{struct_ori_engine_1_1_plane}\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+
+
+float x,y,z; came from vector as the normal to the surface + distance to the surface (d)  
+
+
+
+
+{\ttfamily \#include $<$Vector.\+h$>$}
+
+Inheritance diagram for Ori\+Engine\+:\+:Plane\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_ori_engine_1_1_plane}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_ori_engine_1_1_plane_a94deefa0a982b77ea7ad882337e06b84}{Plane} (float s=0.\+0f)
+\begin{DoxyCompactList}\small\item\em Here\textquotesingle{}s a set of constructors. \end{DoxyCompactList}\item 
+\hyperlink{struct_ori_engine_1_1_plane_afdd998df2694dd0861a9c5f352125a04}{Plane} (float \+\_\+x, float \+\_\+y, float \+\_\+z, float \+\_\+d)
+\item 
+\hyperlink{struct_ori_engine_1_1_plane_ac25785437dcaacb2adb0b3667cf78fda}{Plane} (const \hyperlink{struct_ori_engine_1_1_plane}{Plane} \&v)
+\item 
+\hyperlink{struct_ori_engine_1_1_plane_abffb56ba7a6f9824664be9037ebbec8c}{Plane} (const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v0, const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v1, const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&v2)
+\item 
+void \hyperlink{struct_ori_engine_1_1_plane_af61832e1aeaff5074e9fd035ac5b8fa4}{normalize} ()
+\begin{DoxyCompactList}\small\item\em Convert this plane into a normalized plane. \end{DoxyCompactList}\item 
+void \hyperlink{struct_ori_engine_1_1_plane_a607d6de04c3f0c5ea9b06cc1397f3227}{print} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{struct_ori_engine_1_1_plane_aa810584e42c4223d18fec10d4099a9eb}{d}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+float x,y,z; came from vector as the normal to the surface + distance to the surface (d) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_ori_engine_1_1_plane_a94deefa0a982b77ea7ad882337e06b84}{}\label{struct_ori_engine_1_1_plane_a94deefa0a982b77ea7ad882337e06b84} 
+\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+\subsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{float}]{s = {\ttfamily 0.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Here\textquotesingle{}s a set of constructors. 
+
+\hypertarget{struct_ori_engine_1_1_plane_afdd998df2694dd0861a9c5f352125a04}{}\label{struct_ori_engine_1_1_plane_afdd998df2694dd0861a9c5f352125a04} 
+\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+\subsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{float}]{\+\_\+x,  }\item[{float}]{\+\_\+y,  }\item[{float}]{\+\_\+z,  }\item[{float}]{\+\_\+d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{struct_ori_engine_1_1_plane_ac25785437dcaacb2adb0b3667cf78fda}{}\label{struct_ori_engine_1_1_plane_ac25785437dcaacb2adb0b3667cf78fda} 
+\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+\subsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_plane}{Plane} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\hypertarget{struct_ori_engine_1_1_plane_abffb56ba7a6f9824664be9037ebbec8c}{}\label{struct_ori_engine_1_1_plane_abffb56ba7a6f9824664be9037ebbec8c} 
+\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+\subsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Ori\+Engine\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v0,  }\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v1,  }\item[{const \hyperlink{struct_ori_engine_1_1_vec3}{Vec3} \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This creates a normalized equation of a plane. Important\+: See note 3. This is the cross product
+
+normalize 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_ori_engine_1_1_plane_af61832e1aeaff5074e9fd035ac5b8fa4}{}\label{struct_ori_engine_1_1_plane_af61832e1aeaff5074e9fd035ac5b8fa4} 
+\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}!normalize@{normalize}}
+\index{normalize@{normalize}!Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily void Ori\+Engine\+::\+Plane\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert this plane into a normalized plane. 
+
+\hypertarget{struct_ori_engine_1_1_plane_a607d6de04c3f0c5ea9b06cc1397f3227}{}\label{struct_ori_engine_1_1_plane_a607d6de04c3f0c5ea9b06cc1397f3227} 
+\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}!print@{print}}
+\index{print@{print}!Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Ori\+Engine\+::\+Plane\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_ori_engine_1_1_plane_aa810584e42c4223d18fec10d4099a9eb}{}\label{struct_ori_engine_1_1_plane_aa810584e42c4223d18fec10d4099a9eb} 
+\index{Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}!d@{d}}
+\index{d@{d}!Ori\+Engine\+::\+Plane@{Ori\+Engine\+::\+Plane}}
+\subsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily float Ori\+Engine\+::\+Plane\+::d}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_vector_8h}{Vector.\+h}\end{DoxyCompactItemize}

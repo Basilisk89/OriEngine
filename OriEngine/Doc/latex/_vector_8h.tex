@@ -1,0 +1,52 @@
+\hypertarget{_vector_8h}{}\section{Ori\+Engine/\+Ori\+Engine/\+Vector.h File Reference}
+\label{_vector_8h}\index{Ori\+Engine/\+Ori\+Engine/\+Vector.\+h@{Ori\+Engine/\+Ori\+Engine/\+Vector.\+h}}
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_ori_engine_1_1_vec3}{Ori\+Engine\+::\+Vec3}
+\item 
+struct \hyperlink{struct_ori_engine_1_1_vec4}{Ori\+Engine\+::\+Vec4}
+\item 
+struct \hyperlink{struct_ori_engine_1_1_sphere}{Ori\+Engine\+::\+Sphere}
+\begin{DoxyCompactList}\small\item\em Just some extra stuff for fun. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_ori_engine_1_1_plane}{Ori\+Engine\+::\+Plane}
+\begin{DoxyCompactList}\small\item\em float x,y,z; came from vector as the normal to the surface + distance to the surface (d) \end{DoxyCompactList}\item 
+struct \hyperlink{struct_ori_engine_1_1_vec2}{Ori\+Engine\+::\+Vec2}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_ori_engine}{Ori\+Engine}
+\begin{DoxyCompactList}\small\item\em Used for passing exceptions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_vector_8h_a77f67ff29641c54b5d7f909e6197fd97}{V\+E\+R\+Y\+\_\+\+S\+M\+A\+LL}~1.\+0e-\/9
+\item 
+\#define \hyperlink{_vector_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}~3.\+14159265358979323846f
+\item 
+\#define \hyperlink{_vector_8h_a7bf0b4b8b3cf2f13f25573b3e151ed88}{D\+E\+G\+R\+E\+E\+S\+\_\+\+T\+O\+\_\+\+R\+A\+D\+I\+A\+NS}~(\hyperlink{_vector_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI} / 180.\+0f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_vector_8h_a7bf0b4b8b3cf2f13f25573b3e151ed88}{}\label{_vector_8h_a7bf0b4b8b3cf2f13f25573b3e151ed88} 
+\index{Vector.\+h@{Vector.\+h}!D\+E\+G\+R\+E\+E\+S\+\_\+\+T\+O\+\_\+\+R\+A\+D\+I\+A\+NS@{D\+E\+G\+R\+E\+E\+S\+\_\+\+T\+O\+\_\+\+R\+A\+D\+I\+A\+NS}}
+\index{D\+E\+G\+R\+E\+E\+S\+\_\+\+T\+O\+\_\+\+R\+A\+D\+I\+A\+NS@{D\+E\+G\+R\+E\+E\+S\+\_\+\+T\+O\+\_\+\+R\+A\+D\+I\+A\+NS}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+G\+R\+E\+E\+S\+\_\+\+T\+O\+\_\+\+R\+A\+D\+I\+A\+NS}{DEGREES\_TO\_RADIANS}}
+{\footnotesize\ttfamily \#define D\+E\+G\+R\+E\+E\+S\+\_\+\+T\+O\+\_\+\+R\+A\+D\+I\+A\+NS~(\hyperlink{_vector_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI} / 180.\+0f)}
+
+\hypertarget{_vector_8h_ae71449b1cc6e6250b91f539153a7a0d3}{}\label{_vector_8h_ae71449b1cc6e6250b91f539153a7a0d3} 
+\index{Vector.\+h@{Vector.\+h}!M\+\_\+\+PI@{M\+\_\+\+PI}}
+\index{M\+\_\+\+PI@{M\+\_\+\+PI}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{M\+\_\+\+PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846f}
+
+\hypertarget{_vector_8h_a77f67ff29641c54b5d7f909e6197fd97}{}\label{_vector_8h_a77f67ff29641c54b5d7f909e6197fd97} 
+\index{Vector.\+h@{Vector.\+h}!V\+E\+R\+Y\+\_\+\+S\+M\+A\+LL@{V\+E\+R\+Y\+\_\+\+S\+M\+A\+LL}}
+\index{V\+E\+R\+Y\+\_\+\+S\+M\+A\+LL@{V\+E\+R\+Y\+\_\+\+S\+M\+A\+LL}!Vector.\+h@{Vector.\+h}}
+\subsubsection{\texorpdfstring{V\+E\+R\+Y\+\_\+\+S\+M\+A\+LL}{VERY\_SMALL}}
+{\footnotesize\ttfamily \#define V\+E\+R\+Y\+\_\+\+S\+M\+A\+LL~1.\+0e-\/9}
+
+Vec3 definitions followed by Vec4 a Plane plus a Sphere at the end just for fun. There are notes at the bottom of this file you might want to read\+This is used in normalizing vectors. Dividing by zero is a well known problem but dividing by nearly zero is also a problem. 

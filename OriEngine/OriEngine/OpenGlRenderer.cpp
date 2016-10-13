@@ -1,41 +1,36 @@
 #include "OpenGlRenderer.h"
-#include <glut-3.7.6\include\GL\glut.h>
-using namespace OriEngine;
 
-OpenGlRenderer::OpenGlRenderer(){
+using namespace OriEngine;
 	
+OpenGlRenderer::OpenGlRenderer(){	
 }
 OpenGlRenderer::~OpenGlRenderer(){
 }
 void OpenGlRenderer::drawPrimative() {
-	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };	// default CCW winding
 	
-		GLuint vao, vbo;
-	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
-	glGenBuffers(1, &vbo);
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glDrawArrays(GL_TRIANGLES, 0, 3);
 	
-		glBufferData(GL_ARRAY_BUFFER, 3 * sizeof(float), verts, GL_STATIC_DRAW);
+			
 	
-		glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	
-		glDrawArrays(GL_TRIANGLES, 0, 3);
-
 }
 void OpenGlRenderer::init() {
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGB);
-	glutInitWindowSize(1200, 800);
+	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };
+	bool primSetup = false;
+	if (!primSetup)
+	{
 
-	glutCreateWindow("Game 640 GLSL");
+		glGenVertexArrays(1, &vao);
+		glBindVertexArray(vao);
+		glGenBuffers(1, &vbo);
+		glBindBuffer(GL_ARRAY_BUFFER, vbo);
 
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
+		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), verts, GL_STATIC_DRAW);
+		glEnableVertexAttribArray(0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
-
-	glewInit();
-	versionInfo();
+		primSetup = true;
+	}
 }
 void OpenGlRenderer::versionInfo() {
 	/// You can (and probably need) to get some info regarding versions and manufacturer
@@ -47,7 +42,6 @@ void OpenGlRenderer::versionInfo() {
 	const GLubyte *vendor = glGetString(GL_VENDOR);
 	const GLubyte *renderer = glGetString(GL_RENDERER);
 	const GLubyte *glslVersion = glGetString(GL_SHADING_LANGUAGE_VERSION);
-
 
 	printf("GL Version - %s\n", version);
 	printf("GL Version - %d.%d\n", major, minor);

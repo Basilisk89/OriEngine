@@ -1,0 +1,101 @@
+\hypertarget{_skeletal_engine_8cpp}{}\section{Ori\+Engine/\+Ori\+Engine/\+Skeletal\+Engine.cpp File Reference}
+\label{_skeletal_engine_8cpp}\index{Ori\+Engine/\+Ori\+Engine/\+Skeletal\+Engine.\+cpp@{Ori\+Engine/\+Ori\+Engine/\+Skeletal\+Engine.\+cpp}}
+{\ttfamily \#include \char`\"{}Abstract\+Engine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Open\+Gl\+Renderer.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_skeletal_engine}{Skeletal\+Engine}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_skeletal_engine_8cpp_acad6fa41870b1c39669430047405c29b}{Setup\+Pixel\+Format} (H\+DC \hyperlink{_skeletal_engine_8cpp_a78f6446a0e13adc7b7b2f239112ac785}{h\+DC})
+\item 
+L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK \hyperlink{_skeletal_engine_8cpp_a903e54c0ef764b6b0ddb3ad46f56a7af}{Main\+Window\+Proc} (H\+W\+ND h\+Wnd, U\+I\+NT u\+Msg, W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+\item 
+int W\+I\+N\+A\+PI \hyperlink{_skeletal_engine_8cpp_ac11a9f698adda87a72e4d287beaabc5f}{Win\+Main} (H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, H\+I\+N\+S\+T\+A\+N\+CE h\+Prev\+Instance, L\+P\+S\+TR lp\+Cmd\+Line, int n\+Show\+Cmd)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{_skeletal_engine_8cpp_aca6adb69ae34f781927fb915d399510a}{window\+Width} = 1024
+\item 
+long \hyperlink{_skeletal_engine_8cpp_af062b0b461abb75526b21664d2951542}{window\+Height} = 768
+\item 
+long \hyperlink{_skeletal_engine_8cpp_a26e15e702adeb1d15c7b13cbb2f5fe03}{window\+Bits} = 32
+\item 
+bool \hyperlink{_skeletal_engine_8cpp_a5a9147cb82d1cbeefadd62beb9e6910b}{fullscreen} = false
+\item 
+\hyperlink{class_ori_engine_1_1_abstract_engine}{Abstract\+Engine} $\ast$ \hyperlink{_skeletal_engine_8cpp_a67e670c1f33b20215b3721b4a515deb2}{Engine}
+\item 
+H\+DC \hyperlink{_skeletal_engine_8cpp_a78f6446a0e13adc7b7b2f239112ac785}{h\+DC}
+\item 
+\hyperlink{class_ori_engine_1_1_sound}{Sound} $\ast$ \hyperlink{_skeletal_engine_8cpp_a2e13f8b0d1b8d319112028cfd073b181}{sound}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_skeletal_engine_8cpp_a903e54c0ef764b6b0ddb3ad46f56a7af}{}\label{_skeletal_engine_8cpp_a903e54c0ef764b6b0ddb3ad46f56a7af} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!Main\+Window\+Proc@{Main\+Window\+Proc}}
+\index{Main\+Window\+Proc@{Main\+Window\+Proc}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{Main\+Window\+Proc()}{MainWindowProc()}}
+{\footnotesize\ttfamily L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK Main\+Window\+Proc (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{h\+Wnd,  }\item[{U\+I\+NT}]{u\+Msg,  }\item[{W\+P\+A\+R\+AM}]{w\+Param,  }\item[{L\+P\+A\+R\+AM}]{l\+Param }\end{DoxyParamCaption})}
+
+\hypertarget{_skeletal_engine_8cpp_acad6fa41870b1c39669430047405c29b}{}\label{_skeletal_engine_8cpp_acad6fa41870b1c39669430047405c29b} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!Setup\+Pixel\+Format@{Setup\+Pixel\+Format}}
+\index{Setup\+Pixel\+Format@{Setup\+Pixel\+Format}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{Setup\+Pixel\+Format()}{SetupPixelFormat()}}
+{\footnotesize\ttfamily void Setup\+Pixel\+Format (\begin{DoxyParamCaption}\item[{H\+DC}]{h\+DC }\end{DoxyParamCaption})}
+
+\hypertarget{_skeletal_engine_8cpp_ac11a9f698adda87a72e4d287beaabc5f}{}\label{_skeletal_engine_8cpp_ac11a9f698adda87a72e4d287beaabc5f} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!Win\+Main@{Win\+Main}}
+\index{Win\+Main@{Win\+Main}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{Win\+Main()}{WinMain()}}
+{\footnotesize\ttfamily int W\+I\+N\+A\+PI Win\+Main (\begin{DoxyParamCaption}\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance,  }\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Prev\+Instance,  }\item[{L\+P\+S\+TR}]{lp\+Cmd\+Line,  }\item[{int}]{n\+Show\+Cmd }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_skeletal_engine_8cpp_a67e670c1f33b20215b3721b4a515deb2}{}\label{_skeletal_engine_8cpp_a67e670c1f33b20215b3721b4a515deb2} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!Engine@{Engine}}
+\index{Engine@{Engine}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{Engine}{Engine}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_abstract_engine}{Abstract\+Engine}$\ast$ Engine}
+
+\hypertarget{_skeletal_engine_8cpp_a5a9147cb82d1cbeefadd62beb9e6910b}{}\label{_skeletal_engine_8cpp_a5a9147cb82d1cbeefadd62beb9e6910b} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!fullscreen@{fullscreen}}
+\index{fullscreen@{fullscreen}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{fullscreen}{fullscreen}}
+{\footnotesize\ttfamily bool fullscreen = false}
+
+\hypertarget{_skeletal_engine_8cpp_a78f6446a0e13adc7b7b2f239112ac785}{}\label{_skeletal_engine_8cpp_a78f6446a0e13adc7b7b2f239112ac785} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!h\+DC@{h\+DC}}
+\index{h\+DC@{h\+DC}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{h\+DC}{hDC}}
+{\footnotesize\ttfamily H\+DC h\+DC}
+
+\hypertarget{_skeletal_engine_8cpp_a2e13f8b0d1b8d319112028cfd073b181}{}\label{_skeletal_engine_8cpp_a2e13f8b0d1b8d319112028cfd073b181} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!sound@{sound}}
+\index{sound@{sound}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{sound}{sound}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_sound}{Sound}$\ast$ sound}
+
+\hypertarget{_skeletal_engine_8cpp_a26e15e702adeb1d15c7b13cbb2f5fe03}{}\label{_skeletal_engine_8cpp_a26e15e702adeb1d15c7b13cbb2f5fe03} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!window\+Bits@{window\+Bits}}
+\index{window\+Bits@{window\+Bits}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{window\+Bits}{windowBits}}
+{\footnotesize\ttfamily long window\+Bits = 32}
+
+\hypertarget{_skeletal_engine_8cpp_af062b0b461abb75526b21664d2951542}{}\label{_skeletal_engine_8cpp_af062b0b461abb75526b21664d2951542} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!window\+Height@{window\+Height}}
+\index{window\+Height@{window\+Height}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{window\+Height}{windowHeight}}
+{\footnotesize\ttfamily long window\+Height = 768}
+
+\hypertarget{_skeletal_engine_8cpp_aca6adb69ae34f781927fb915d399510a}{}\label{_skeletal_engine_8cpp_aca6adb69ae34f781927fb915d399510a} 
+\index{Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}!window\+Width@{window\+Width}}
+\index{window\+Width@{window\+Width}!Skeletal\+Engine.\+cpp@{Skeletal\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{window\+Width}{windowWidth}}
+{\footnotesize\ttfamily long window\+Width = 1024}
+

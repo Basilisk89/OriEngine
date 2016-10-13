@@ -1,0 +1,151 @@
+\hypertarget{class_ori_engine_1_1_debug_logger}{}\section{Ori\+Engine\+:\+:Debug\+Logger Class Reference}
+\label{class_ori_engine_1_1_debug_logger}\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+
+
+{\ttfamily \#include $<$Debug\+Logger.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5}{Msg\+Type} \{ \newline
+\hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ab6bcc0b412c72a2126fc3b658b9be961}{N\+O\+NE}, 
+\hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ace4fa1b1c453dff06bf74511997b28e7}{T\+R\+A\+CE}, 
+\hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5af275ff14d31e843b4d5164d3083a19af}{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ab4c3d06dbcd91e5cb0578c9fefcfd763}{W\+A\+RN}, 
+\newline
+\hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5aaa1f0e20c9d6cb0949c529b79f011b16}{I\+N\+FO}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ori_engine_1_1_debug_logger_a48c9ac551189e990e03290579aa8a986}{$\sim$\+Debug\+Logger} ()
+\item 
+void \hyperlink{class_ori_engine_1_1_debug_logger_a3fd1279ac33bfd6994e74a402d304d1f}{remove\+Instance} ()
+\item 
+void \hyperlink{class_ori_engine_1_1_debug_logger_a879e4e9ae75084e9994fd987b8f05705}{log} (const \hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5}{Msg\+Type} threat, const std\+::string \&\+\_\+class, const std\+::string Method, const std\+::string \&filename, const int line, const std\+::string \&msg)
+\item 
+void \hyperlink{class_ori_engine_1_1_debug_logger_aaed348f81d341ecae87c9f61a40eb3bf}{clean} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_ori_engine_1_1_debug_logger}{Debug\+Logger} \& \hyperlink{class_ori_engine_1_1_debug_logger_a4005bb3158755d94376f1f45ac36dbbe}{get\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ori_engine_1_1_debug_logger_a8d6cd2c43a93f46d0b19c737a88765a5}{Debug\+Logger} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::default\+\_\+delete$<$ \hyperlink{class_ori_engine_1_1_debug_logger}{Debug\+Logger} $>$ \hyperlink{class_ori_engine_1_1_debug_logger_ae86b0220c28dba347069ffd1b8d119f6}{log\+Deleter}
+\item 
+std\+::ofstream \hyperlink{class_ori_engine_1_1_debug_logger_a23007f95260fd62728a4828b9d5af54a}{log\+File}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \hyperlink{class_ori_engine_1_1_debug_logger}{Debug\+Logger} $>$ \hyperlink{class_ori_engine_1_1_debug_logger_a4ce97f44559d7b62a2e6a535b34ce3f5}{log\+Instance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5}{}\label{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!Msg\+Type@{Msg\+Type}}
+\index{Msg\+Type@{Msg\+Type}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{Msg\+Type}{MsgType}}
+{\footnotesize\ttfamily enum \hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5}{Ori\+Engine\+::\+Debug\+Logger\+::\+Msg\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!N\+O\+NE@{N\+O\+NE}}}\hypertarget{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ab6bcc0b412c72a2126fc3b658b9be961}{}\label{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ab6bcc0b412c72a2126fc3b658b9be961} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+A\+CE@{T\+R\+A\+CE}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!T\+R\+A\+CE@{T\+R\+A\+CE}}}\hypertarget{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ace4fa1b1c453dff06bf74511997b28e7}{}\label{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ace4fa1b1c453dff06bf74511997b28e7} 
+T\+R\+A\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR@{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR@{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}}}\hypertarget{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5af275ff14d31e843b4d5164d3083a19af}{}\label{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5af275ff14d31e843b4d5164d3083a19af} 
+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+A\+RN@{W\+A\+RN}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!W\+A\+RN@{W\+A\+RN}}}\hypertarget{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ab4c3d06dbcd91e5cb0578c9fefcfd763}{}\label{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5ab4c3d06dbcd91e5cb0578c9fefcfd763} 
+W\+A\+RN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+FO@{I\+N\+FO}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!I\+N\+FO@{I\+N\+FO}}}\hypertarget{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5aaa1f0e20c9d6cb0949c529b79f011b16}{}\label{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5aaa1f0e20c9d6cb0949c529b79f011b16} 
+I\+N\+FO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ori_engine_1_1_debug_logger_a48c9ac551189e990e03290579aa8a986}{}\label{class_ori_engine_1_1_debug_logger_a48c9ac551189e990e03290579aa8a986} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!````~Debug\+Logger@{$\sim$\+Debug\+Logger}}
+\index{````~Debug\+Logger@{$\sim$\+Debug\+Logger}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{$\sim$\+Debug\+Logger()}{~DebugLogger()}}
+{\footnotesize\ttfamily Debug\+Logger\+::$\sim$\+Debug\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_debug_logger_a8d6cd2c43a93f46d0b19c737a88765a5}{}\label{class_ori_engine_1_1_debug_logger_a8d6cd2c43a93f46d0b19c737a88765a5} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!Debug\+Logger@{Debug\+Logger}}
+\index{Debug\+Logger@{Debug\+Logger}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{Debug\+Logger()}{DebugLogger()}}
+{\footnotesize\ttfamily Debug\+Logger\+::\+Debug\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ori_engine_1_1_debug_logger_aaed348f81d341ecae87c9f61a40eb3bf}{}\label{class_ori_engine_1_1_debug_logger_aaed348f81d341ecae87c9f61a40eb3bf} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!clean@{clean}}
+\index{clean@{clean}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void Debug\+Logger\+::clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_debug_logger_a4005bb3158755d94376f1f45ac36dbbe}{}\label{class_ori_engine_1_1_debug_logger_a4005bb3158755d94376f1f45ac36dbbe} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily \hyperlink{class_ori_engine_1_1_debug_logger}{Debug\+Logger} \& Debug\+Logger\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_ori_engine_1_1_debug_logger_a879e4e9ae75084e9994fd987b8f05705}{}\label{class_ori_engine_1_1_debug_logger_a879e4e9ae75084e9994fd987b8f05705} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!log@{log}}
+\index{log@{log}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Debug\+Logger\+::log (\begin{DoxyParamCaption}\item[{const \hyperlink{class_ori_engine_1_1_debug_logger_a3ac0c97517b3aecb4ea7bdb5b98e6fe5}{Msg\+Type}}]{threat,  }\item[{const std\+::string \&}]{\+\_\+class,  }\item[{const std\+::string}]{Method,  }\item[{const std\+::string \&}]{filename,  }\item[{const int}]{line,  }\item[{const std\+::string \&}]{msg }\end{DoxyParamCaption})}
+
+\hypertarget{class_ori_engine_1_1_debug_logger_a3fd1279ac33bfd6994e74a402d304d1f}{}\label{class_ori_engine_1_1_debug_logger_a3fd1279ac33bfd6994e74a402d304d1f} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!remove\+Instance@{remove\+Instance}}
+\index{remove\+Instance@{remove\+Instance}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{remove\+Instance()}{removeInstance()}}
+{\footnotesize\ttfamily void Debug\+Logger\+::remove\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_ori_engine_1_1_debug_logger_ae86b0220c28dba347069ffd1b8d119f6}{}\label{class_ori_engine_1_1_debug_logger_ae86b0220c28dba347069ffd1b8d119f6} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!log\+Deleter@{log\+Deleter}}
+\index{log\+Deleter@{log\+Deleter}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{log\+Deleter}{logDeleter}}
+{\footnotesize\ttfamily std\+::default\+\_\+delete$<$\hyperlink{class_ori_engine_1_1_debug_logger}{Debug\+Logger}$>$ Ori\+Engine\+::\+Debug\+Logger\+::log\+Deleter\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_debug_logger_a23007f95260fd62728a4828b9d5af54a}{}\label{class_ori_engine_1_1_debug_logger_a23007f95260fd62728a4828b9d5af54a} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!log\+File@{log\+File}}
+\index{log\+File@{log\+File}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{log\+File}{logFile}}
+{\footnotesize\ttfamily std\+::ofstream Ori\+Engine\+::\+Debug\+Logger\+::log\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+\hypertarget{class_ori_engine_1_1_debug_logger_a4ce97f44559d7b62a2e6a535b34ce3f5}{}\label{class_ori_engine_1_1_debug_logger_a4ce97f44559d7b62a2e6a535b34ce3f5} 
+\index{Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}!log\+Instance@{log\+Instance}}
+\index{log\+Instance@{log\+Instance}!Ori\+Engine\+::\+Debug\+Logger@{Ori\+Engine\+::\+Debug\+Logger}}
+\subsubsection{\texorpdfstring{log\+Instance}{logInstance}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \hyperlink{class_ori_engine_1_1_debug_logger}{Debug\+Logger} $>$ Debug\+Logger\+::log\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_debug_logger_8h}{Debug\+Logger.\+h}\item 
+Ori\+Engine/\+Ori\+Engine/\hyperlink{_debug_logger_8cpp}{Debug\+Logger.\+cpp}\end{DoxyCompactItemize}

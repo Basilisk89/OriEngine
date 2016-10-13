@@ -1,0 +1,25 @@
+var class_ori_engine_1_1_window =
+[
+    [ "Window", "class_ori_engine_1_1_window.html#a74e6087da23d3c24e9fac0245e5ec92c", null ],
+    [ "Window", "class_ori_engine_1_1_window.html#a16f73e151437c63953a6396aa80b686f", null ],
+    [ "Window", "class_ori_engine_1_1_window.html#acda5b9ba9a89a8bd8df298c1cedb71a8", null ],
+    [ "~Window", "class_ori_engine_1_1_window.html#a245d821e6016fa1f6970ccbbedd635f6", null ],
+    [ "getGLInfo", "class_ori_engine_1_1_window.html#a8e80d9499f2968b20492b517006cc1b3", null ],
+    [ "GetHeight", "class_ori_engine_1_1_window.html#a2196b5ae099037272cc85b223e80bd6d", null ],
+    [ "getRect", "class_ori_engine_1_1_window.html#a53ff5d3c56b28604d41b676bfdbf5129", null ],
+    [ "GetWidth", "class_ori_engine_1_1_window.html#a451bdfeab37afce97712f23f5c2492aa", null ],
+    [ "getWindow", "class_ori_engine_1_1_window.html#acf146679abf09abf89941b1882fc92dc", null ],
+    [ "Initialize", "class_ori_engine_1_1_window.html#a41cab6dae60380563b8bc593e87f0c87", null ],
+    [ "operator=", "class_ori_engine_1_1_window.html#aad30c448f70cb9f20641289765e23350", null ],
+    [ "operator=", "class_ori_engine_1_1_window.html#a54a09c75fc36036859b93c276ca834fa", null ],
+    [ "SetWindowSize", "class_ori_engine_1_1_window.html#a21db050c674219f29a985694739ff31e", null ],
+    [ "Shutdown", "class_ori_engine_1_1_window.html#a89c434ec340b4594c6c8af3f0bf58c9b", null ],
+    [ "ToggleFullScreen", "class_ori_engine_1_1_window.html#a65149d93f9842363f53bdc3e07f459a6", null ],
+    [ "bIsFullScreen", "class_ori_engine_1_1_window.html#a31ccebb8ecb24ead816ae2559e1e36d2", null ],
+    [ "bIsInitialized", "class_ori_engine_1_1_window.html#a9a2f58afdd7d2cdd920f7c733b4b7dd6", null ],
+    [ "glContext", "class_ori_engine_1_1_window.html#a1e0582658a858b0cfa732c990a8573c0", null ],
+    [ "Height", "class_ori_engine_1_1_window.html#a2315cbe759b91f12618a81f47b1f4c32", null ],
+    [ "SDLWindow", "class_ori_engine_1_1_window.html#ab89e66fc9f835484f073a7ac7c1ee546", null ],
+    [ "Width", "class_ori_engine_1_1_window.html#a3f618d387c7429ade0b51f3c76c1ebb6", null ],
+    [ "winRect", "class_ori_engine_1_1_window.html#a1e2e93b43d6b1ca022ad8393db7ac35f", null ]
+];
