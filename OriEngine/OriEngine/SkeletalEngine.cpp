@@ -18,45 +18,37 @@ AbstractEngine* engine;
 
 HDC hDC;
 
-class MainGame : public AbstractEngine
-{
+class MainGame : public AbstractEngine{
 private:
 	double lastFpsPrint = 0.0;
 
 public:
-	MainGame()
-	{
+	MainGame(){
 
 	}
 
 
-	virtual void postRender()
-	{
+	virtual void postRender(){
 
 	}
 
-	virtual void initializeWindowingSystem()
-	{
+	virtual void initializeWindowingSystem(){
 	}
 
-	virtual void onStart()
-	{
+	virtual void onStart(){
 
 	}
 
-	virtual void preRender(double timeSinceLastFrame)
-	{
+	virtual void preRender(double timeSinceLastFrame){
 	}
 
 };
 
 
-void SetupPixelFormat(HDC hDC)
-{
+void SetupPixelFormat(HDC hDC){
 	int pixelFormat;
 
-	PIXELFORMATDESCRIPTOR pfd =
-	{
+	PIXELFORMATDESCRIPTOR pfd ={
 		sizeof(PIXELFORMATDESCRIPTOR),	// size
 		1,							// version
 		PFD_SUPPORT_OPENGL |		// OpenGL window
@@ -81,15 +73,13 @@ void SetupPixelFormat(HDC hDC)
 	SetPixelFormat(hDC, pixelFormat, &pfd);
 }
 
-LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
+LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam){
 	static HDC hDC;
 	static HGLRC hRC;
 	int height, width;
 
 	// dispatch messages
-	switch (uMsg)
-	{
+	switch (uMsg){
 	case WM_CREATE:			// window creation
 		hDC = GetDC(hWnd);
 		SetupPixelFormat(hDC);
@@ -188,8 +178,7 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
-{
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd){
 	WNDCLASSEX windowClass;		// window class
 	HWND	   hwnd;			// window handle
 	MSG		   msg;				// message
@@ -228,8 +217,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	fullscreen = false;
 
-	if (fullscreen)								// fullscreen?
-	{
+	if (fullscreen){
 		DEVMODE dmScreenSettings;					// device mode
 		memset(&dmScreenSettings, 0, sizeof(dmScreenSettings));
 		dmScreenSettings.dmSize = sizeof(dmScreenSettings);
@@ -239,22 +227,18 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		dmScreenSettings.dmFields = DM_BITSPERPEL | DM_PELSWIDTH | DM_PELSHEIGHT;
 
 		// 
-		if (ChangeDisplaySettings(&dmScreenSettings, CDS_FULLSCREEN) != DISP_CHANGE_SUCCESSFUL)
-		{
+		if (ChangeDisplaySettings(&dmScreenSettings, CDS_FULLSCREEN) != DISP_CHANGE_SUCCESSFUL){
 			// setting display mode failed, switch to windowed
 			MessageBox(NULL, "Display mode failed", NULL, MB_OK);
 			fullscreen = FALSE;
 		}
 	}
 
-	if (fullscreen)								// Are We Still In Fullscreen Mode?
-	{
+	if (fullscreen){
 		dwExStyle = WS_EX_APPWINDOW;					// Window Extended Style
 		dwStyle = WS_POPUP;						// Windows Style
 		ShowCursor(FALSE);						// Hide Mouse Pointer
-	}
-	else
-	{
+	}else{
 		dwExStyle = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;			// Window Extended Style
 		dwStyle = WS_OVERLAPPEDWINDOW;					// Windows Style
 	}
@@ -287,10 +271,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		AbstractEngine::getInstance()->musicSystem.updateSounds();
 		SwapBuffers(hDC);
 
-		while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE))
-		{
-			if (!GetMessage(&msg, NULL, 0, 0))
-			{
+		while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE)){
+			if (!GetMessage(&msg, NULL, 0, 0)){
 				//GeEngine::getRunningApp()->stopRunning();
 				break;
 			}
@@ -301,12 +283,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 
 	//GeEngine::getRunningApp()->shutdown();
-
-	if (fullscreen)
-	{
+	if (fullscreen){
 		ChangeDisplaySettings(NULL, 0);					// If So Switch Back To The Desktop
 		ShowCursor(TRUE);						// Show Mouse Pointer
 	}
-
 	return (int)msg.wParam;
 }
