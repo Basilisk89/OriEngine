@@ -16,10 +16,7 @@ AbstractEngine* AbstractEngine::getInstance() {
 		return appInstance;
 	}
 }
-void AbstractEngine::onCreate() {
 
-	
-}
 	void AbstractEngine::init() {
 		appInstance = this;
 		Clock::init();

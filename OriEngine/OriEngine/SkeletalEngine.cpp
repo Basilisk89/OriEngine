@@ -4,7 +4,7 @@
 #include <iostream>
 #include <glew-2.0.0\include\GL\glew.h>
 #include <Windows.h>
-
+#include <AlienFX SDK\Unmanaged\includes\LFX2.h>
 #include "Clock.h"
 #include "AbstractEngine.h"
 #include "DebugLogger.h"
@@ -35,8 +35,10 @@ public:
 	virtual void initializeWindowingSystem(){
 	}
 
-	virtual void onStart(){
-
+	virtual void onCreate(){
+		AbstractEngine::getInstance()->renderer.init();
+		AbstractEngine::getInstance()->musicSystem.createSounds("C:/Users/Ryan/Documents/GitHub/OriEngine/OriEngine/OriEngineResources/FFXIV_OST_The_Fractal_Continuum_Theme.mp3", 1);
+		AbstractEngine::getInstance()->musicSystem.playSounds(1);
 	}
 
 	virtual void preRender(double timeSinceLastFrame){
@@ -72,6 +74,28 @@ void SetupPixelFormat(HDC hDC){
 	pixelFormat = ChoosePixelFormat(hDC, &pfd);
 	SetPixelFormat(hDC, pixelFormat, &pfd);
 }
+void deleteContext(HDC hDC, HGLRC hGLRC) {
+	if (hDC && hGLRC) {
+		wglMakeCurrent(hDC, NULL);
+		wglDeleteContext(hGLRC);
+	}
+}
+void createContext(HDC hDC, HGLRC hGLRC) {
+		hGLRC = wglCreateContext(hDC);
+		wglMakeCurrent(hDC, hGLRC);
+}
+bool InitGL() {
+	if (glewInit() != GLEW_OK) {
+		MessageBoxA(0, "GLEW failed to load", "OriEngine", 0);
+		DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "SkeletalEngine.cpp", "InitGL", __FILE__, __LINE__, "Glew Failed to Initialize");
+		return false;
+	}else {
+		MessageBoxA(NULL, (char*)glGetString(GL_VERSION), "OPENGL VERSION", 0);
+		DebugLogger::getInstance().log(DebugLogger::INFO, "SkeletalEngine.cpp", "InitGL", __FILE__, __LINE__, "Glew Started");
+		return true;
+	}
+	
+}
 
 LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam){
 	static HDC hDC;
@@ -83,30 +107,23 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 	case WM_CREATE:			// window creation
 		hDC = GetDC(hWnd);
 		SetupPixelFormat(hDC);
-		//SetupPalette();
-		hRC = wglCreateContext(hDC);
-		wglMakeCurrent(hDC, hRC);
-
-		//LogManager::getInstance().error(std::string("Game created before GLEWInit in winMain"));
-	//	glewExperimental = GL_TRUE;
-		if (glewInit() != GLEW_OK){
-			DebugLogger::getInstance().log(DebugLogger::FATAL_ERROR, "SkeletalEngine.cpp", "MainWindowProc", __FILE__, __LINE__, "Glew Failed to Initialize");
-		} // wait until the window is set up before initializing glew!
 	
-		AbstractEngine::getInstance()->musicSystem.createSounds("C:/Users/Ryan/Documents/GitHub/OriEngine/OriEngine/OriEngineResources/FFXIV_OST_The_Fractal_Continuum_Theme.mp3", 1);
-		AbstractEngine::getInstance()->musicSystem.playSounds(1);
+		createContext(hDC, hRC);
+
+		InitGL();
 		break;
 
 	case WM_DESTROY:			// window destroy
 	case WM_QUIT:
+	
 		exit(0);
+		break;
 	case WM_CLOSE:					// windows is closing
 
-									// deselect rendering context and delete it
-	//	hdApp->getRunningApp()->stopRunning();
-		wglMakeCurrent(hDC, NULL);
-		wglDeleteContext(hRC);
 
+		deleteContext(hDC, hRC);
+
+		MessageBoxA(hWnd, "Quiting?", "OriEngine", 0);
 		// send WM_QUIT to message queue
 		PostQuitMessage(0);
 		exit(0);
@@ -161,7 +178,7 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		case VK_ESCAPE:
 			PostQuitMessage(0);
 			exit(0);
-			break;
+			break;	
 		default:
 			/*if(GeEngine::getRunningApp()->deliverKeyDownEvents())
 			{
@@ -177,7 +194,15 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 	}
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
-
+HWND CreateGLWindow(DWORD dwStyle,RECT windowRectangle,HINSTANCE hInstance,const char* className, const char* windowName) {
+	HWND tmphWnd;
+	tmphWnd = CreateWindowEx(NULL, className, windowName, dwStyle | WS_CLIPCHILDREN | WS_CLIPSIBLINGS, 0, 0, windowRectangle.right - windowRectangle.left, windowRectangle.bottom - windowRectangle.top, NULL, NULL, hInstance, NULL);
+	if (!tmphWnd) {
+		return NULL;
+	}else{
+		return tmphWnd;
+	}
+}
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd){
 	WNDCLASSEX windowClass;		// window class
 	HWND	   hwnd;			// window handle
@@ -207,9 +232,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	windowClass.hIcon = LoadIcon(NULL, IDI_APPLICATION);	// default icon
 	windowClass.hCursor = LoadCursor(NULL, IDC_ARROW);		// default arrow
 	windowClass.hbrBackground = NULL;								// don't need background
-	windowClass.lpszMenuName = NULL;								// no menu
+	windowClass.lpszMenuName = "Options";								// no menu
 	windowClass.lpszClassName = "GLClass";
-	windowClass.hIconSm = LoadIcon(NULL, IDI_WINLOGO);		// windows logo small icon
+	windowClass.hIconSm = (HICON)LoadImage(GetModuleHandle(0), "C: / Users / Ryan / Documents / GitHub / OriEngine / OriEngine / OriEngineResources / V.ico", IMAGE_ICON, 0, 0, LR_DEFAULTCOLOR);	// windows logo small icon
 
 															// register the windows class
 	if (!RegisterClassEx(&windowClass))
@@ -244,25 +269,18 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 
 	AdjustWindowRectEx(&windowRect, dwStyle, FALSE, dwExStyle);		// Adjust Window To True Requested Size
-
-																	// class registered, so now create our window
-	hwnd = CreateWindowEx(NULL,"GLClass",	"OriEngine",dwStyle | WS_CLIPCHILDREN |WS_CLIPSIBLINGS,0, 0,	windowRect.right - windowRect.left,windowRect.bottom - windowRect.top, NULL,NULL,hInstance,	NULL);								
-
-
-	AbstractEngine::getInstance()->renderer.init();
+	hwnd = CreateGLWindow(dwStyle, windowRect, hInstance, "GLClass", "OriEngine");
 	hDC = GetDC(hwnd);
 
 	// check if window creation failed (hwnd would equal NULL)
-	if (!hwnd)
-		return 0;
-
-
+	if (!hwnd) {
+		exit(0);
+	}	else {
+		engine->onCreate();
+	}
+	
 	ShowWindow(hwnd, SW_SHOW);			// display the window
 	UpdateWindow(hwnd);					// update the window
-
-
-
-
 
 	while (true){
 		AbstractEngine::getInstance()->startRender();

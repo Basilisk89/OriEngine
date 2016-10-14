@@ -13,7 +13,7 @@ namespace OriEngine {
 		OpenGlRenderer renderer;
 		MusicSystem musicSystem;
 		static AbstractEngine* getInstance();
-	    virtual void onCreate() ;
+	    virtual void onCreate() = 0;
 		void init();
 	    virtual void preRender(double time) ;
 	    virtual void postRender() ;
