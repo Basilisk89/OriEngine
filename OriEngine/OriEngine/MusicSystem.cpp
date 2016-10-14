@@ -33,5 +33,6 @@ bool MusicSystem::playSounds(int index) {
 }
 bool MusicSystem::updateSounds() {
 	FMOD_RESULT result = soundSystem->update();
-	return true;
+	if (result != FMOD_OK) {return false;}
+	else {return true;}
 }

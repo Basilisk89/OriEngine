@@ -133,8 +133,6 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		height = HIWORD(lParam);		// retrieve width and height
 		width = LOWORD(lParam);
 
-		//GeEngine::getRunningApp()->setWindowSize(width, height);
-
 		break;
 
 	case WM_ACTIVATEAPP:		// activate app
@@ -162,10 +160,7 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		break;
 
 	case WM_KEYUP:
-		/*if(GeEngine::getRunningApp()->deliverKeyUpEvents())
-		{
-		GeEngine::getRunningApp()->handleKeyUpEvent((int)wParam, (short)lParam & 0x000000000000FFFF);
-		}*/
+
 		break;
 
 	case WM_KEYDOWN:
@@ -194,14 +189,54 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 	}
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
+void gameLoop(MSG msg) {
+	while (true) {
+		AbstractEngine::getInstance()->startRender();
+		AbstractEngine::getInstance()->render();
+		AbstractEngine::getInstance()->endRender();
+		AbstractEngine::getInstance()->musicSystem.updateSounds();
+		SwapBuffers(hDC);
+
+		while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE)) {
+			if (!GetMessage(&msg, NULL, 0, 0)) {
+				//GeEngine::getRunningApp()->stopRunning();
+				break;
+			}
+
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+	}
+}
 HWND CreateGLWindow(DWORD dwStyle,RECT windowRectangle,HINSTANCE hInstance,const char* className, const char* windowName) {
 	HWND tmphWnd;
 	tmphWnd = CreateWindowEx(NULL, className, windowName, dwStyle | WS_CLIPCHILDREN | WS_CLIPSIBLINGS, 0, 0, windowRectangle.right - windowRectangle.left, windowRectangle.bottom - windowRectangle.top, NULL, NULL, hInstance, NULL);
-	if (!tmphWnd) {
-		return NULL;
-	}else{
-		return tmphWnd;
-	}
+	if (!tmphWnd) {return NULL;}
+	else{return tmphWnd;}
+}
+WNDCLASSEX setWindowClass( UINT style, HINSTANCE hInstance) {
+	WNDCLASSEX windowClass;
+	windowClass.cbSize = sizeof(WNDCLASSEX);
+	windowClass.style = CS_HREDRAW | CS_VREDRAW;
+	windowClass.lpfnWndProc = MainWindowProc;
+	windowClass.cbClsExtra = 0;
+	windowClass.cbWndExtra = 0;
+	windowClass.hInstance = hInstance;
+	windowClass.hIcon = LoadIcon(NULL, IDI_APPLICATION);	// default icon
+	windowClass.hCursor = LoadCursor(NULL, IDC_ARROW);		// default arrow
+	windowClass.hbrBackground = NULL;								// don't need background
+	windowClass.lpszMenuName = "Options";								// no menu
+	windowClass.lpszClassName = "GLClass";
+	windowClass.hIconSm = (HICON)LoadImage(GetModuleHandle(0), "C: / Users / Ryan / Documents / GitHub / OriEngine / OriEngine / OriEngineResources / V.ico", IMAGE_ICON, 0, 0, LR_DEFAULTCOLOR);	// windows logo small icon
+	return windowClass;
+}
+RECT getWindowRect(int width, int height) {
+	RECT windowRect;
+	windowRect.left = (long)0;						// Set Left Value To 0
+	windowRect.right = width;	// Set Right Value To Requested Width
+	windowRect.top = (long)0;							// Set Top Value To 0
+	windowRect.bottom = height;
+	return windowRect;
 }
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd){
 	WNDCLASSEX windowClass;		// window class
@@ -217,25 +252,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	engine = new MainGame();
 
-	windowRect.left = (long)0;						// Set Left Value To 0
-	windowRect.right = (long)800;	// Set Right Value To Requested Width
-	windowRect.top = (long)0;							// Set Top Value To 0
-	windowRect.bottom = (long)400;	// Set Bottom Value To Requested Height
-
-									// fill out the window class structure
-	windowClass.cbSize = sizeof(WNDCLASSEX);
-	windowClass.style = CS_HREDRAW | CS_VREDRAW;
-	windowClass.lpfnWndProc = MainWindowProc;
-	windowClass.cbClsExtra = 0;
-	windowClass.cbWndExtra = 0;
-	windowClass.hInstance = hInstance;
-	windowClass.hIcon = LoadIcon(NULL, IDI_APPLICATION);	// default icon
-	windowClass.hCursor = LoadCursor(NULL, IDC_ARROW);		// default arrow
-	windowClass.hbrBackground = NULL;								// don't need background
-	windowClass.lpszMenuName = "Options";								// no menu
-	windowClass.lpszClassName = "GLClass";
-	windowClass.hIconSm = (HICON)LoadImage(GetModuleHandle(0), "C: / Users / Ryan / Documents / GitHub / OriEngine / OriEngine / OriEngineResources / V.ico", IMAGE_ICON, 0, 0, LR_DEFAULTCOLOR);	// windows logo small icon
-
+	windowRect = getWindowRect(800, 400);
+				
+	windowClass = setWindowClass(CS_HREDRAW | CS_VREDRAW, hInstance);
 															// register the windows class
 	if (!RegisterClassEx(&windowClass))
 		return 0;
@@ -273,24 +292,23 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	hDC = GetDC(hwnd);
 
 	// check if window creation failed (hwnd would equal NULL)
-	if (!hwnd) {
+	if (!hwnd) 
 		exit(0);
-	}	else {
+	if(hwnd)
 		engine->onCreate();
-	}
+	
 	
 	ShowWindow(hwnd, SW_SHOW);			// display the window
 	UpdateWindow(hwnd);					// update the window
-
-	while (true){
+	while (true) {
 		AbstractEngine::getInstance()->startRender();
 		AbstractEngine::getInstance()->render();
 		AbstractEngine::getInstance()->endRender();
 		AbstractEngine::getInstance()->musicSystem.updateSounds();
 		SwapBuffers(hDC);
 
-		while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE)){
-			if (!GetMessage(&msg, NULL, 0, 0)){
+		while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE)) {
+			if (!GetMessage(&msg, NULL, 0, 0)) {
 				//GeEngine::getRunningApp()->stopRunning();
 				break;
 			}
@@ -299,7 +317,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			DispatchMessage(&msg);
 		}
 	}
-
 	//GeEngine::getRunningApp()->shutdown();
 	if (fullscreen){
 		ChangeDisplaySettings(NULL, 0);					// If So Switch Back To The Desktop
