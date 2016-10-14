@@ -8,6 +8,7 @@
 #include "Clock.h"
 #include "AbstractEngine.h"
 #include "DebugLogger.h"
+#include "Model.h"
 using namespace OriEngine;
 long windowWidth = 1024;
 long windowHeight = 768;
@@ -15,11 +16,13 @@ long windowBits = 32;
 bool fullscreen = false;
 
 AbstractEngine* engine;
-
+Model* model;
 HDC hDC;
+Camera* camera;
 
 class MainGame : public AbstractEngine{
 private:
+
 	double lastFpsPrint = 0.0;
 
 public:
@@ -36,7 +39,8 @@ public:
 	}
 
 	virtual void onCreate(){
-		AbstractEngine::getInstance()->renderer.init();
+	//	AbstractEngine::getInstance()->renderer.init();
+	
 		AbstractEngine::getInstance()->musicSystem.createSounds("C:/Users/Ryan/Documents/GitHub/OriEngine/OriEngine/OriEngineResources/FFXIV_OST_The_Fractal_Continuum_Theme.mp3", 1);
 		AbstractEngine::getInstance()->musicSystem.playSounds(1);
 	}
@@ -192,7 +196,7 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 void gameLoop(MSG msg) {
 	while (true) {
 		AbstractEngine::getInstance()->startRender();
-		AbstractEngine::getInstance()->render();
+	
 		AbstractEngine::getInstance()->endRender();
 		AbstractEngine::getInstance()->musicSystem.updateSounds();
 		SwapBuffers(hDC);
@@ -296,13 +300,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		exit(0);
 	if(hwnd)
 		engine->onCreate();
-	
+	Vec4 light = Vec4(-0.0, 5.0, -0.0, 0.0);;
 	
 	ShowWindow(hwnd, SW_SHOW);			// display the window
 	UpdateWindow(hwnd);					// update the window
 	while (true) {
 		AbstractEngine::getInstance()->startRender();
-		AbstractEngine::getInstance()->render();
+
 		AbstractEngine::getInstance()->endRender();
 		AbstractEngine::getInstance()->musicSystem.updateSounds();
 		SwapBuffers(hDC);

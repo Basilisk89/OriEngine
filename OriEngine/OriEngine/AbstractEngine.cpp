@@ -1,7 +1,10 @@
 #include "AbstractEngine.h"
 
 #include <iostream>
+#include "Model.h"
 using namespace OriEngine;
+
+
 AbstractEngine *AbstractEngine::appInstance = nullptr;
 AbstractEngine::AbstractEngine(){
 	init();
@@ -22,7 +25,6 @@ AbstractEngine* AbstractEngine::getInstance() {
 		Clock::init();
 		lastFrameStartTime = Clock::getTime();
 		lastFrameFinishTime = Clock::getTime();
-		
 	
 
 	
@@ -45,7 +47,7 @@ void AbstractEngine::preRender(double time) {
 	std::cout << time << std::endl;
 }
 void AbstractEngine::render()  {
-	renderer.drawPrimative();
+//	renderer.drawPrimative();
 }
 void AbstractEngine::postRender()  {
 

@@ -7,9 +7,11 @@
 #include "DebugLogger.h"
 #include "Clock.h"
 #include "OpenGlRenderer.h"
+#include "ShaderManager.h"
 namespace OriEngine {
 	class AbstractEngine {
 	public:
+		Shader *shader;
 		OpenGlRenderer renderer;
 		MusicSystem musicSystem;
 		static AbstractEngine* getInstance();
