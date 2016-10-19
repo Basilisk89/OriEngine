@@ -7,7 +7,7 @@ using namespace OriEngine;
 
 AbstractEngine *AbstractEngine::appInstance = nullptr;
 AbstractEngine::AbstractEngine(){
-	init();
+	
 }
 AbstractEngine::~AbstractEngine(){
 	cleanUp();
@@ -47,7 +47,7 @@ void AbstractEngine::preRender(double time) {
 	std::cout << time << std::endl;
 }
 void AbstractEngine::render()  {
-//	renderer.drawPrimative();
+	renderer.drawPrimative();
 }
 void AbstractEngine::postRender()  {
 

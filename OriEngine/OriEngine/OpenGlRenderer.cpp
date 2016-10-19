@@ -15,10 +15,12 @@ void OpenGlRenderer::drawPrimative() {
 	
 }
 void OpenGlRenderer::init() {
+	texture.loadTexture("C:/Users/Ryan/Documents/GitHub/OriEngine/OriEngine/OriEngineResources/index.bmp");
+	
 	float verts[] = { 0.0, 0.5, 0.0, -0.5, -0.5, 0, 0.5, -0.5, 0.0 };
 	bool primSetup = false;
 	if (!primSetup){
-
+		TextureID = texture.initGLTexture();
 		glGenVertexArrays(1, &vao);
 		glBindVertexArray(vao);
 		glGenBuffers(1, &vbo);
@@ -27,7 +29,7 @@ void OpenGlRenderer::init() {
 		glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), verts, GL_STATIC_DRAW);
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-
+			
 		primSetup = true;
 	}
 }

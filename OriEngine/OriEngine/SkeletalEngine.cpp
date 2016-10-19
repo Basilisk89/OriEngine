@@ -39,7 +39,7 @@ public:
 	}
 
 	virtual void onCreate(){
-	//	AbstractEngine::getInstance()->renderer.init();
+		AbstractEngine::getInstance()->renderer.init();
 	
 		AbstractEngine::getInstance()->musicSystem.createSounds("C:/Users/Ryan/Documents/GitHub/OriEngine/OriEngine/OriEngineResources/FFXIV_OST_The_Fractal_Continuum_Theme.mp3", 1);
 		AbstractEngine::getInstance()->musicSystem.playSounds(1);
@@ -100,7 +100,10 @@ bool InitGL() {
 	}
 	
 }
-
+bool InitFreeImage() {
+	FreeImage_Initialise(true);
+	return true;
+}
 LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam){
 	static HDC hDC;
 	static HGLRC hRC;
@@ -115,11 +118,12 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 		createContext(hDC, hRC);
 
 		InitGL();
+		InitFreeImage();
 		break;
 
 	case WM_DESTROY:			// window destroy
 	case WM_QUIT:
-	
+		MessageBoxA(hWnd, "Quiting?", "OriEngine", 0);
 		exit(0);
 		break;
 	case WM_CLOSE:					// windows is closing
@@ -175,6 +179,7 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 
 		switch (fwKeys){
 		case VK_ESCAPE:
+			MessageBoxA(hWnd, "Quiting?", "OriEngine", 0);
 			PostQuitMessage(0);
 			exit(0);
 			break;	
@@ -196,9 +201,9 @@ LRESULT CALLBACK MainWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 void gameLoop(MSG msg) {
 	while (true) {
 		AbstractEngine::getInstance()->startRender();
-	
-		AbstractEngine::getInstance()->endRender();
 		AbstractEngine::getInstance()->musicSystem.updateSounds();
+		AbstractEngine::getInstance()->endRender();
+	
 		SwapBuffers(hDC);
 
 		while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE)) {
@@ -306,9 +311,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	UpdateWindow(hwnd);					// update the window
 	while (true) {
 		AbstractEngine::getInstance()->startRender();
-
-		AbstractEngine::getInstance()->endRender();
 		AbstractEngine::getInstance()->musicSystem.updateSounds();
+		AbstractEngine::getInstance()->render();
+		AbstractEngine::getInstance()->endRender();
+		
 		SwapBuffers(hDC);
 
 		while (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE)) {

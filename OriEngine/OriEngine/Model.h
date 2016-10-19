@@ -1,19 +1,13 @@
 
 #pragma once
-// Std. Includes
-
 #include <map>
-
 #include "Mesh.h"
-// GL Includes
 #include "Shader.h"
-/*#include <assimp/Importer.hpp>
-#include <assimp/scene.h>
-#include <assimp/postprocess.h>*/
-#include <Assimp/include/assimp/Importer.hpp>
-#include <Assimp\include\assimp\scene.h>
-#include <Assimp\include\assimp\postprocess.h>
 #include "Camera.h"
+#include <Assimp/include/assimp/Importer.hpp>
+#include <Assimp/include/assimp/scene.h>
+#include <Assimp/include/assimp/postprocess.h>
+
  
 namespace OriEngine {
 	class Model{

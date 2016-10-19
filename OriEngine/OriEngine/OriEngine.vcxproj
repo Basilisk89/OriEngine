@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\OpenAL 1.1 SDK\libs\Win32;$(ProjectDir)\..\OriEngineDepenacies\FMOD Studio API Windows\api\lowlevel\lib;$(ProjectDir)\..\OriEngineDepenacies\SDL2-2.0.4\lib\x86;$(ProjectDir)\..\OriEngineDepenacies\glew-2.0.0\lib\Release\Win32;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\Assimp\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\OpenAL 1.1 SDK\libs\Win32;$(ProjectDir)\..\OriEngineDepenacies\FMOD Studio API Windows\api\lowlevel\lib;$(ProjectDir)\..\OriEngineDepenacies\SDL2-2.0.4\lib\x86;$(ProjectDir)\..\OriEngineDepenacies\glew-2.0.0\lib\Release\Win32;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\Assimp\lib;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\FreeImage\Dist\x32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LibraryPath>C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\FMOD Studio API Windows\api\lowlevel\lib;C:\Users\Ryan\Documents\GitHub\OriEngine\OriEngine\OriEngineDepenacies\glew-2.0.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
@@ -83,7 +83,7 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glew32.lib;fmod_vc.lib;opengl32.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;fmod_vc.lib;opengl32.lib;assimp-vc140-mt.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -132,6 +132,8 @@
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="DebugLogger.cpp" />
     <ClCompile Include="AbstractEngine.cpp" />
+    <ClCompile Include="GLTexture.cpp" />
+    <ClCompile Include="ImgManager.cpp" />
     <ClCompile Include="MatrixStack.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MMath.cpp" />
@@ -152,7 +154,11 @@
     <ClInclude Include="Clock.h" />
     <ClInclude Include="DebugLogger.h" />
     <ClInclude Include="AbstractEngine.h" />
+    <ClInclude Include="GLTexture.h" />
     <ClInclude Include="IGameGL.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="ImageLoader.h" />
+    <ClInclude Include="ImgManager.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="MatrixStack.h" />
     <ClInclude Include="Mesh.h" />

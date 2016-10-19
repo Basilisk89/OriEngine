@@ -1,6 +1,8 @@
 #ifndef OPENGLRENDERER_H
 #define OPENGLRENDERER_H
 #include "AbstractRenderer.h"
+#include "ShaderManager.h"
+#include "GLTexture.h"
 namespace OriEngine {
 	class OpenGlRenderer : public AbstractRenderer {
 	public:
@@ -12,8 +14,9 @@ namespace OriEngine {
 		virtual void drawPrimative();
 		int winHeight;
 		int winWidth;
-
+		GLuint TextureID;
 		GLuint vao, vbo;
+		GLTexture texture;
 	};
 	class OpenGLRendererBuilder :public AbstractRenderer {
 	public:

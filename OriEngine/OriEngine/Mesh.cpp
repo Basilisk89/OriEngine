@@ -16,10 +16,7 @@ void Mesh::loadMesh(std::vector<Vertex> _vertices, std::vector<GLuint> _indices)
 {
 	vertices = _vertices;
 	indices = _indices;
-	for (int i = 0; i < vertices.size(); i++) {
-	//	vertices.at(i).Position = VMath::normalize(vertices.at(i).Position);
-	//	vertices.at(i).Normal = VMath::normalize(VMath::cross(vertices.at(i).Position - vertices.at(i +1).Position,vertices.at(i + 3).Position - vertices.at(i).Position) );
-	}
+	
 	
 	
 	setupMesh();
